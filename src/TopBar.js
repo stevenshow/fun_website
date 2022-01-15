@@ -1,6 +1,6 @@
 import './TopBar.css';
 
-function TopBar() {
+const TopBar = () =>{
   return (
     <div class="topnav">
         <a class="active" href="#home">Home</a>
@@ -8,7 +8,7 @@ function TopBar() {
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
         <div>
-          <div className='logo'>Hello</div>
+          <div className='logo'>Logo Here</div>
         </div>
     </div>
   );
