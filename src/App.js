@@ -1,11 +1,11 @@
 import './App.css';
+import TopBar from './TopBar'
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
-      <body>This is the body of the website</body>
+      <TopBar/>
+      <h1>This is the body of the website</h1>
     </div>
   );
 }
