@@ -1,11 +1,15 @@
 import './App.css';
 import TopBar from './TopBar'
+import Home from "./pages/Home.js"
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="App">
       <TopBar/>
-      <h1>This is the body of the website</h1>
+      <div className='Content'> 
+        <Home/>
+      </div>
     </div>
   );
 }
