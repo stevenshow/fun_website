@@ -5,6 +5,7 @@
 .App-header {
   /* background-color: #282c34; */
   background-color: white;
+  background: no-repeat center center fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,3 +15,7 @@
   color: white;
 }
 
+html {
+  background: url(./img/linking_lines.png) no-repeat center center fixed;
+  background-size: cover;
+}
