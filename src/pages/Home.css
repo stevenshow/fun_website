@@ -1,19 +1,17 @@
 .cardHolder {
   display: grid;
+  padding: calc(1% + 1.9vmin);
   gap: 20px 30px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 1rem;
 }
 
 .card {
   background: white;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  height: 100%;
-  margin: 5px;
-  overflow: hidden;
   transition: 0.3s;
   width: 100%;
+  border: 1px solid gray;
 }
 
 .card:hover {
@@ -22,19 +20,26 @@
 
 .content {
   padding: 2px 15px;
+  margin: 10px;
 }
 
 .title {
-  margin-top: 15px;
   border-top: 1px solid black;
   border-bottom: 1px solid black; 
+  margin-top: 15px;
 }
 
 .header {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid gray;
 }
 
 div > img {
   width: inherit;
+  margin-top: 10px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
