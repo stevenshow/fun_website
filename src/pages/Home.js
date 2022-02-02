@@ -11,7 +11,7 @@ const Home = () => {
       <div className="cardHolder">
         <div className="card">
           <img src={linux} alt="linux logo" />
-          <div className="container">
+          <div className="content">
             <h3>
               <b>Linux</b>
             </h3>
@@ -26,7 +26,7 @@ const Home = () => {
         </div>
         <div class="card">
           <img src={rasp} alt="raspberrypi" />
-          <div className="container">
+          <div className="content">
             <h3>
               <b>Raspberry Pi</b>
             </h3>
@@ -44,7 +44,7 @@ const Home = () => {
         </div>
         <div className="card">
           <img src={python} alt="python logo" />
-          <div className="container">
+          <div className="content">
             <h3>
               <b>Python</b>
             </h3>
@@ -61,6 +61,42 @@ const Home = () => {
               interpreter and the extensive standard library are available in
               source or binary form without charge for all major platforms, and
               can be freely distributed.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src={rasp} alt="raspberrypi" />
+          <div className="content">
+            <h3>
+              <b>Raspberry Pi</b>
+            </h3>
+            <p>
+              The Raspberry Pi is a low cost, credit-card sized computer that
+              plugs into a computer monitor or TV, and uses a standard keyboard
+              and mouse. It is a capable little device that enables people of
+              all ages to explore computing, and to learn how to program in
+              languages like Scratch and Python. It’s capable of doing
+              everything you’d expect a desktop computer to do, from browsing
+              the internet and playing high-definition video, to making
+              spreadsheets, word-processing, and playing games.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src={rasp} alt="raspberrypi" />
+          <div className="content">
+            <h3>
+              <b>Raspberry Pi</b>
+            </h3>
+            <p>
+              The Raspberry Pi is a low cost, credit-card sized computer that
+              plugs into a computer monitor or TV, and uses a standard keyboard
+              and mouse. It is a capable little device that enables people of
+              all ages to explore computing, and to learn how to program in
+              languages like Scratch and Python. It’s capable of doing
+              everything you’d expect a desktop computer to do, from browsing
+              the internet and playing high-definition video, to making
+              spreadsheets, word-processing, and playing games.
             </p>
           </div>
         </div>
