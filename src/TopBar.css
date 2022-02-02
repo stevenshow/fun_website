@@ -1,33 +1,21 @@
 .topnav {
-    background: white;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     justify-content: start;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3); */
 }
 
 .topnav > a {
-    background: #83BADE;
+    background: #83DED1;
     text-align: center;
     color: white;
     padding: 12px 14px;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
     text-decoration: none;
 }
 
 .topnav a:hover {
-    background: #9DEAF5;
-    color: black;
-    top: -2px;
-    box-shadow: 0 1px 1px rgba(0,10,10,10.2);
-}
-
-.topnav > div {
-    background: gray;
-    padding: 12px 14px;
-}
-
-.topnav .logo {
-    color: white;
-    text-align: right;
+    background: #94FACF;
+    color: gray;
+    box-shadow: 0 1px 1px #7F7F7F;
 }
