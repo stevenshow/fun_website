@@ -21,8 +21,13 @@
 }
 
 .content {
-  border-top: 1px solid red;
   padding: 2px 15px;
+}
+
+.title {
+  margin-top: 15px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; 
 }
 
 .header {

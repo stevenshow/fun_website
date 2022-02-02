@@ -77,10 +77,12 @@ const Home = () => {
         {cards.map((card) => (
           <div className="card" key={card.id}>
             <img src={card.image} alt={card.alt} />
-            <div className="content">
+            <div className="title">
               <h3>
                 <b>{card.name}</b>
               </h3>
+            </div>
+            <div className="content">
               <p>{card.content}</p>
             </div>
           </div>
@@ -90,4 +92,3 @@ const Home = () => {
   );
 };
 export default Home;
-
