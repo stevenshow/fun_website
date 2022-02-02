@@ -1,10 +1,6 @@
 .topnav {
     background: white;
     display: grid;
-    /* overflow: hidden; */
-    /* grid-template-columns: repeat(4, 1fr); */
-    /* I do not like how this is implemented. 
-    TODO: Find a better/cleaner way of doing this topbar [][][][][        ] */
     grid-template-columns: repeat(4,1fr);
     justify-content: start;
 }
