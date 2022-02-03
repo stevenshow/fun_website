@@ -73,7 +73,12 @@ const Home = () => {
   return (
     <div className="home">
       <div className="header">
-        <h1>Hi, I am Steven Schoebinger</h1>
+        <p>
+          <span className="green-highlight">steven@schoebinger</span>:
+          <span className="blue-highlight">~</span>$
+          <span className="green-highlight">echo </span>Welcome to my website!
+          <span className="cursor">.</span>
+        </p>
       </div>
       <div className="cardHolder">
         {cards.map((card) => (
