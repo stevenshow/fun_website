@@ -1,11 +1,17 @@
 .header {
-  padding-left: 2.5em;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  /* padding-left: 2.5em;
   padding-top: 1em;
   padding-bottom: 1em;
   background-color: black;
-  text-align: left;
+  text-align: left; */
+}
+
+.header * {
   font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+  font-size: 1.2rem;
 }
 
 .header > p {
@@ -32,6 +38,32 @@
   50% {
     opacity: 0;
   }
+}
+
+.links-right,
+button {
+  display: grid;
+  background: none;
+  border: none;
+  border-left: 1px solid white;
+}
+
+button:hover {
+  color: lightblue;
+}
+
+.home-nav {
+  color: white;
+}
+
+.projects-nav {
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.contact-nav {
+  color: white;
 }
 
 /* .topnav {
