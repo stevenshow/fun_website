@@ -1,3 +1,9 @@
+.home {
+  background-image: url("../img/linking_lines.png");
+  background-attachment: scroll;
+  min-height: 100vh; 
+}
+
 .cardHolder {
   display: grid;
   padding: calc(1% + 1.9vmin);
