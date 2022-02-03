@@ -1,11 +1,6 @@
 .header {
   display: grid;
   grid-template-columns: 10fr 1fr;
-  /* padding-left: 2.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: black;
-  text-align: left; */
 }
 
 .header * {
@@ -15,9 +10,9 @@
 }
 
 .header > p {
-  margin: 0;
-  font-weight: bold;
   color: white;
+  font-weight: bold;
+  margin: 0;
 }
 
 .header .green-highlight {
@@ -30,7 +25,6 @@
 
 .cursor {
   animation: cursor-blink 1s step-start infinite;
-  /* animation-direction: alternate; */
   margin: 2px;
 }
 
@@ -42,28 +36,20 @@
 
 .links-right,
 button {
-  display: grid;
   background: none;
   border: none;
-  border-left: 1px solid white;
+  border-left: 1px solid #90EE90;
+  color: white;
+  display: grid;
 }
 
 button:hover {
-  color: lightblue;
-}
-
-.home-nav {
-  color: white;
+  color: blue;
 }
 
 .projects-nav {
-  color: white;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-}
-
-.contact-nav {
-  color: white;
+  border-bottom: 1px solid #90EE90;
+  border-top: 1px solid #90EE90;
 }
 
 /* .topnav {
