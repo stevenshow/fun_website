@@ -67,6 +67,21 @@ const cards = [
     education by making it more affordable and accessible to
     students of all backgrounds.`,
   },
+  {
+    name: "UVU",
+    alt: "utah valley university logo",
+    image: uvu,
+    id: 4,
+    content: `Utah Valley University is the largest public university in the
+    state of Utah, and one of a few in the nation offering a
+    dual-mission model that combines the rigor and richness of a
+    first-rate teaching university with the openness and vocational
+    programs of a community college. The unique model, which focuses
+    on student success, engaged learning, rigorous academic
+    programs, and faculty-mentored research, is transforming higher
+    education by making it more affordable and accessible to
+    students of all backgrounds.`,
+  }
 ];
 
 const Home = () => {
