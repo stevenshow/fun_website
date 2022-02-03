@@ -1,5 +1,6 @@
 .home {
-  background-image: url("../img/linking_lines.png");
+  /* background-image: url("../img/linking_lines.png"); */
+  background-color: black;
   background-attachment: fixed;
   min-height: 100vh; 
 }
@@ -37,35 +38,6 @@
   border-bottom: 2px dashed #4B7075; 
   margin-top: 15px;
   font-size: 18px;
-}
-
-.header {
-  padding-left: 2.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: black;
-  text-align: left;
-  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-}
-
-.header > p {
-  margin: 0;
-  font-weight: bold;
-  color: white;
-}
-
-.header .green-highlight {
-  color: lightgreen;
-}
-
-.header .blue-highlight {
-  color: lightblue;
-}
-
-.cursor {
-  background-color: white;
-  border: 1px solid white;
-  margin: 2px;
 }
 
 div > img {

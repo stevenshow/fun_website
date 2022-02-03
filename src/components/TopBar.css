@@ -1,4 +1,40 @@
-.topnav {
+.header {
+  padding-left: 2.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: black;
+  text-align: left;
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+}
+
+.header > p {
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.header .green-highlight {
+  color: lightgreen;
+}
+
+.header .blue-highlight {
+  color: lightblue;
+}
+
+.cursor {
+  animation: cursor-blink 1s step-start infinite;
+  /* animation-direction: alternate; */
+  margin: 2px;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* .topnav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: start;
@@ -25,4 +61,4 @@
   background: #94facf;
   color: gray;
   box-shadow: 0 1px 1px #7f7f7f;
-}
+} */

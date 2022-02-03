@@ -9,7 +9,7 @@ const TopBar = () => {
       <span className="green-highlight">steven@schoebinger</span>:
       <span className="blue-highlight">~</span>$
       <span className="green-highlight">echo </span>Welcome to my website!
-      <span className="cursor">.</span>
+      <span className="cursor">_</span>
     </p>
   </div>
   );
