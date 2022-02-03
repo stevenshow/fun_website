@@ -1,21 +1,28 @@
 .topnav {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-content: start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: start;
 }
 
 .topnav > a {
-    background: #83DED1;
-    text-align: center;
-    color: white;
-    padding: 12px 14px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
+  background: #83ded1;
+  filter: grayscale(20%);
+  text-align: center;
+  color: white;
+  padding: 12px 14px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.projects {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
 }
 
 .topnav a:hover {
-    background: #94FACF;
-    color: gray;
-    box-shadow: 0 1px 1px #7F7F7F;
+  background: #94facf;
+  color: gray;
+  box-shadow: 0 1px 1px #7f7f7f;
 }
