@@ -4,6 +4,7 @@ import rasp from "../img/raspberrypi.png";
 import linux from "../img/linux_logo.png";
 import python from "../img/python_logo.png";
 import uvu from "../img/uvu_logo.png";
+import { ModalHover } from "react-modal-hover";
 
 const cards = [
   {
@@ -93,7 +94,7 @@ const Home = () => {
           <div className="card" key={card.id}>
             <div className="title">{`> ${card.name}`}</div>
             <div className="content">
-              <p>{card.content}</p>
+                <p>{card.content}</p>
             </div>
           </div>
         ))}
