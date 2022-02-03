@@ -1,5 +1,5 @@
 import "./Home.css";
-import TopBar from "../TopBar.js";
+import TopBar from "../components/TopBar.js";
 import rasp from "../img/raspberrypi.png";
 import linux from "../img/linux_logo.png";
 import python from "../img/python_logo.png";
@@ -72,14 +72,7 @@ const cards = [
 const Home = () => {
   return (
     <div className="home">
-      <div className="header">
-        <p>
-          <span className="green-highlight">steven@schoebinger</span>:
-          <span className="blue-highlight">~</span>$
-          <span className="green-highlight">echo </span>Welcome to my website!
-          <span className="cursor">.</span>
-        </p>
-      </div>
+      <TopBar/>
       <div className="cardHolder">
         {cards.map((card) => (
           <div className="card" key={card.id}>
