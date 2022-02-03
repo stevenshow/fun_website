@@ -1,40 +1,50 @@
 .cardHolder {
   display: grid;
+  padding: calc(1% + 1.9vmin);
   gap: 20px 30px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 .card {
-  background: white;
+  background: #9DEAF5;
+  filter: grayscale(20%);
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  height: 100%;
-  margin: 5px;
-  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
   transition: 0.3s;
   width: 100%;
+  max-height: fit-content;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 
 .content {
   padding: 2px 15px;
+  margin: 10px;
+  font-size: 20px;
+  text-align: left;
 }
 
 .title {
+  border-top: 2px dashed #4B7075;
+  border-bottom: 2px dashed #4B7075; 
   margin-top: 15px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black; 
+  font-size: 18px;
 }
 
 .header {
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header > h1 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-weight: bolder;
 }
 
 div > img {
   width: inherit;
+  margin-top: 10px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }

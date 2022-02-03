@@ -1,16 +1,22 @@
-import './TopBar.css';
+import "./TopBar.css";
 
 //TODO Find out how to make the top bar "sticky"
 
-const TopBar = () =>{
+const TopBar = () => {
   return (
     <div class="topnav">
-        <a href="home">Home</a>
-        <a href="projects">Projects</a>
-        <a href="contact">Contact</a>
-        <a href="about">About</a>
+      <a className="home" href="home">
+        Home
+      </a>
+      <a className="projects" href="projects">
+        Projects
+      </a>
+      <a className="contact" href="contact">
+        Contact
+      </a>
+      {/* <a href="about">About</a> */}
     </div>
   );
-}
+};
 
 export default TopBar;

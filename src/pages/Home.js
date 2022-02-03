@@ -72,7 +72,9 @@ const cards = [
 const Home = () => {
   return (
     <div className="home">
-      <h1 className="header">Hi, I am Steven Schoebinger</h1>
+      <div className="header">
+        <h1>Hi, I am Steven Schoebinger</h1>
+      </div>
       <div className="cardHolder">
         {cards.map((card) => (
           <div className="card" key={card.id}>
