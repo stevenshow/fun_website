@@ -1,5 +1,5 @@
 import "./Home.css";
-import TopBar from "../components/TopBar.js";
+import TopBar from "../components/TopBar";
 import rasp from "../img/raspberrypi.png";
 import linux from "../img/linux_logo.png";
 import python from "../img/python_logo.png";
@@ -72,16 +72,12 @@ const cards = [
 const Home = () => {
   return (
     <div className="home">
-      <TopBar/>
+      <TopBar />
       <div className="cardHolder">
         {cards.map((card) => (
           <div className="card" key={card.id}>
             <img src={card.image} alt={card.alt} />
-            <div className="title">
-              <h3>
-                <b>{card.name}</b>
-              </h3>
-            </div>
+            <div className="title">{card.name}</div>
             <div className="content">
               <p>{card.content}</p>
             </div>
@@ -91,4 +87,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;
