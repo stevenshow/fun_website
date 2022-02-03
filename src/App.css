@@ -15,7 +15,7 @@
   background: black;
   background-size: cover;
   z-index:-1;
-  filter: blur(5px);
+  /* filter: blur(5px); */
 }
 
 .App-header {
