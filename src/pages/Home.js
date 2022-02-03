@@ -68,7 +68,7 @@ const cards = [
     students of all backgrounds.`,
   },
   {
-    name: "UVU",
+    name: "Front End Development",
     alt: "utah valley university logo",
     image: uvu,
     id: 4,
