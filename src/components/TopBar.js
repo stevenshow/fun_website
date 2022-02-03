@@ -6,8 +6,12 @@ const TopBar = () => {
       <p>
         <span className="green-highlight">steven@schoebinger</span>:
         <span className="blue-highlight">~</span>$
-        <span className="green-highlight">echo </span>Welcome to my website!
-        <span className="cursor">_</span>
+        <span className="green-highlight"> echo </span>Welcome to{" "}
+        <span className="blue-highlight">$NAME\'s</span> website!
+        <div>Welcome to Steven's website!</div>
+        <span className="green-highlight">steven@schoebinger</span>:
+        <span className="blue-highlight">~</span>$
+        <span className="cursor"> _</span>
       </p>
       <div className="links-right">
         <button type="button" className="home-nav">
