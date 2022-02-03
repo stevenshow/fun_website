@@ -3,8 +3,24 @@
   background-color: black;
   overflow: auto;
   height: 100vh;
-  border-left: 1px solid lightgreen;
-  border-right: 1px solid lightgreen;
+  /* border-left: 1px solid lightgreen; */
+  /* border-right: 1px solid lightgreen; */
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: black; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: lightgreen; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: lightgreen; 
 }
 
 /* Allows for the background to be blurred but not the children */
