@@ -1,7 +1,8 @@
 .cardHolder {
   display: grid;
-  padding: calc(1% + 1.9vmin);
-  gap: 20px 30px;
+  height: 100%;
+  padding: 2%;
+  gap: 3% 2%;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
@@ -37,7 +38,7 @@ div > img {
   /* background-image: url("../img/linking_lines.png"); */
   background-color: black;
   background-attachment: fixed;
-  min-height: 100vh; 
+  /* min-height: 100vh;  */
   border-left: 2px solid #90EE90;
   border-right: 2px solid #90EE90;
 }
