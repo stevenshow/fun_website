@@ -1,22 +1,22 @@
 .cardHolder {
   display: grid;
-  padding: calc(1% + 1.9vmin);
-  gap: 20px 30px;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  height: 100%;
+  padding: 2%;
+  gap: 3% 2%;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .card {
-  background: #9DEAF5;
-  filter: grayscale(20%);
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
+  border: 1px solid lightgreen;
+  box-shadow: 0 4px 8px 0 rgba(144, 238, 144, .5);
   transition: 0.3s;
   width: 100%;
   max-height: fit-content;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 16px 0 rgba(144, 238, 144, 0.6);
 }
 
 .content {
@@ -24,42 +24,7 @@
   margin: 10px;
   font-size: 20px;
   text-align: left;
-}
-
-.title {
-  border-top: 2px dashed #4B7075;
-  border-bottom: 2px dashed #4B7075; 
-  margin-top: 15px;
-  font-size: 18px;
-}
-
-.header {
-  padding-left: 2.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: black;
-  text-align: left;
-  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-}
-
-.header > p {
-  margin: 0;
-  font-weight: bold;
   color: white;
-}
-
-.header .green-highlight {
-  color: lightgreen;
-}
-
-.header .blue-highlight {
-  color: lightblue;
-}
-
-.cursor {
-  background-color: white;
-  border: 1px solid white;
-  margin: 2px;
 }
 
 div > img {
@@ -67,4 +32,26 @@ div > img {
   margin-top: 10px;
   aspect-ratio: 3/2;
   object-fit: contain;
+}
+
+.home {
+  /* background-image: url("../img/linking_lines.png"); */
+  background-color: black;
+  background-attachment: fixed;
+  /* min-height: 100vh;  */
+  border-left: 2px solid #90EE90;
+  border-right: 2px solid #90EE90;
+}
+
+.home .header {
+  border: 1px solid #90EE90;
+  padding-left: 1em;
+}
+
+.title {
+  border-top: 2px solid #90EE90;
+  border-bottom: 2px solid #90EE90; 
+  margin-top: 15px;
+  font-size: 1.5em;
+  color: white;
 }

@@ -1,5 +1,5 @@
 import "./Home.css";
-import TopBar from "../TopBar.js";
+import TopBar from "../components/TopBar";
 import rasp from "../img/raspberrypi.png";
 import linux from "../img/linux_logo.png";
 import python from "../img/python_logo.png";
@@ -67,28 +67,31 @@ const cards = [
     education by making it more affordable and accessible to
     students of all backgrounds.`,
   },
+  {
+    name: "Front End Development",
+    alt: "utah valley university logo",
+    image: uvu,
+    id: 4,
+    content: `Utah Valley University is the largest public university in the
+    state of Utah, and one of a few in the nation offering a
+    dual-mission model that combines the rigor and richness of a
+    first-rate teaching university with the openness and vocational
+    programs of a community college. The unique model, which focuses
+    on student success, engaged learning, rigorous academic
+    programs, and faculty-mentored research, is transforming higher
+    education by making it more affordable and accessible to
+    students of all backgrounds.`,
+  }
 ];
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="header">
-        <p>
-          <span className="green-highlight">steven@schoebinger</span>:
-          <span className="blue-highlight">~</span>$
-          <span className="green-highlight">echo </span>Welcome to my website!
-          <span className="cursor">.</span>
-        </p>
-      </div>
+      <TopBar />
       <div className="cardHolder">
         {cards.map((card) => (
           <div className="card" key={card.id}>
-            <img src={card.image} alt={card.alt} />
-            <div className="title">
-              <h3>
-                <b>{card.name}</b>
-              </h3>
-            </div>
+            <div className="title">{`> ${card.name}`}</div>
             <div className="content">
               <p>{card.content}</p>
             </div>
@@ -98,4 +101,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;
