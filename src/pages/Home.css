@@ -1,6 +1,6 @@
 .home {
   background-image: url("../img/linking_lines.png");
-  background-attachment: scroll;
+  background-attachment: fixed;
   min-height: 100vh; 
 }
 
