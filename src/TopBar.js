@@ -5,13 +5,13 @@ import "./TopBar.css";
 const TopBar = () => {
   return (
     <div class="topnav">
-      <a className="home" href="home">
+      <a className="home-nav" href="home">
         Home
       </a>
-      <a className="projects" href="projects">
+      <a className="projects-nav" href="projects">
         Projects
       </a>
-      <a className="contact" href="contact">
+      <a className="contact-nav" href="contact">
         Contact
       </a>
       {/* <a href="about">About</a> */}
