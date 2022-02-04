@@ -14,7 +14,7 @@
   max-height: fit-content;
 }
 
-@media only screen and (max-width: 31em) {
+@media only screen and (width < 40em) {
   .card {
     width: 90%;
   }
