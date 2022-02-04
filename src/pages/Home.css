@@ -15,10 +15,6 @@
   max-height: fit-content;
 }
 
-.card:hover {
-  /* box-shadow: 0 8px 16px 0 rgba(144, 238, 144, 0.6); */
-}
-
 .card:hover .content, .card:hover .title {
   color: white;
   transition: color .3s;
