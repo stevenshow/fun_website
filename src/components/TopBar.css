@@ -16,11 +16,11 @@
 }
 
 .header .green-highlight {
-  color: rgb(27, 235, 27);
+  color: var(--terminal-green);
 }
 
 .header .blue-highlight {
-  color: rgb(21, 115, 255);
+  color: var(--terminal-blue);
 }
 
 .cursor {
@@ -38,45 +38,16 @@
 button {
   background: none;
   border: none;
-  border-left: 1px solid rgb(27, 235, 27);
+  border-left: 1px solid var(--terminal-green);
   color: white;
   display: grid;
 }
 
 button:hover {
-  color: rgb(21, 115, 255);
+  color: var(--terminal-blue);
 }
 
 .projects-nav {
-  border-bottom: 1px solid rgb(27, 235, 27);
-  border-top: 1px solid rgb(27, 235, 27);
+  border-bottom: 1px solid var(--terminal-green);
+  border-top: 1px solid var(--terminal-green);
 }
-
-/* .topnav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: start;
-}
-
-.topnav > a {
-  background: #83ded1;
-  filter: grayscale(20%);
-  text-align: center;
-  color: white;
-  padding: 12px 14px;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-
-}
-
-.projects-nav {
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
-}
-
-.topnav a:hover {
-  background: #94facf;
-  color: gray;
-  box-shadow: 0 1px 1px #7f7f7f;
-} */

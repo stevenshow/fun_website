@@ -9,10 +9,15 @@
 .card {
   border-radius: 5px;
   border: 1px solid rgb(27, 235, 27);
-  /* box-shadow: 0 4px 8px 0 rgba(144, 238, 144, .5); */
   transition: 0.3s;
   width: 100%;
   max-height: fit-content;
+}
+
+@media only screen and (max-width: 31em) {
+  .card {
+    width: 90%;
+  }
 }
 
 .card:hover .content, .card:hover .title {

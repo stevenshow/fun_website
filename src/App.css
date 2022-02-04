@@ -14,11 +14,11 @@
 }
  
 ::-webkit-scrollbar-thumb {
-  background: rgb(27, 235, 27); 
+  background: var(--terminal-green);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(27, 235, 27); 
+  background: var(--terminal-green); 
 }
 
 /* Allows for the background to be blurred but not the children */
