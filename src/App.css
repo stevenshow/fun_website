@@ -16,11 +16,11 @@
 }
  
 ::-webkit-scrollbar-thumb {
-  background: lightgreen; 
+  background: rgb(27, 235, 27); 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: lightgreen; 
+  background: rgb(27, 235, 27); 
 }
 
 /* Allows for the background to be blurred but not the children */
