@@ -1,4 +1,5 @@
 import "./TopBar.css";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
   return (
@@ -14,15 +15,14 @@ const TopBar = () => {
         <span className="cursor"> _</span>
       </p>
       <div className="links-right">
-        <button type="button" className="home-nav">
+        {/* <button type="button" className="home-nav">
           Home
         </button>
         <button type="button" className="projects-nav">
           Projects
-        </button>
-        <button type="button" className="contact-nav">
-          Contact
-        </button>
+        </button> */}
+        <Link to="/">Home</Link>
+        <Link to="/about">Contact</Link>
       </div>
     </div>
   );
