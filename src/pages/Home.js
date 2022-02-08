@@ -4,7 +4,6 @@ import rasp from "../img/raspberrypi.png";
 import linux from "../img/linux_logo.png";
 import python from "../img/python_logo.png";
 import uvu from "../img/uvu_logo.png";
-import { ModalHover } from "react-modal-hover";
 
 const cards = [
   {
@@ -12,14 +11,7 @@ const cards = [
     alt: "linux logo",
     image: linux,
     id: 1,
-    content: `The Raspberry Pi is a low cost, credit-card sized computer that
-    plugs into a computer monitor or TV, and uses a standard keyboard
-    and mouse. It is a capable little device that enables people of
-    all ages to explore computing, and to learn how to program in
-    languages like Scratch and Python. It’s capable of doing
-    everything you’d expect a desktop computer to do, from browsing
-    the internet and playing high-definition video, to making
-    spreadsheets, word-processing, and playing games.`,
+    content: `Linux is the best-known and most-used open source operating system. As an operating system, Linux is software that sits underneath all of the other software on a computer, receiving requests from those programs and relaying these requests to the computer’s hardware.`,
   },
   {
     name: "Raspberry Pi",
@@ -73,16 +65,8 @@ const cards = [
     alt: "utah valley university logo",
     image: uvu,
     id: 4,
-    content: `Utah Valley University is the largest public university in the
-    state of Utah, and one of a few in the nation offering a
-    dual-mission model that combines the rigor and richness of a
-    first-rate teaching university with the openness and vocational
-    programs of a community college. The unique model, which focuses
-    on student success, engaged learning, rigorous academic
-    programs, and faculty-mentored research, is transforming higher
-    education by making it more affordable and accessible to
-    students of all backgrounds.`,
-  }
+    content: `Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. The challenge associated with front end development is that the tools and techniques used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.`,
+  },
 ];
 
 const Home = () => {
@@ -94,7 +78,7 @@ const Home = () => {
           <div className="card" key={card.id}>
             <div className="title">{`> ${card.name}`}</div>
             <div className="content">
-                <p>{card.content}</p>
+              <p>{card.content}</p>
             </div>
           </div>
         ))}
