@@ -21,8 +21,9 @@ const TopBar = () => {
         <button type="button" className="projects-nav">
           Projects
         </button> */}
-        <Link to="/">Home</Link>
-        <Link to="/about">Contact</Link>
+        <Link className="link" to="/">Home</Link>
+        <Link className="link projects-nav" to="/projects">Projects</Link>
+        <Link className="link" to="/contact">Contact</Link>
       </div>
     </div>
   );
