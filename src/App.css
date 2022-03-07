@@ -2,7 +2,6 @@
   font-family: "Lucida Console", "Courier New", monospace;
   background-color: black;
   overflow: auto;
-  height: 100vh;
 }
 
 ::-webkit-scrollbar {
