@@ -1,7 +1,6 @@
 .App {
   font-family: "Lucida Console", "Courier New", monospace;
   background-color: black;
-  overflow: auto;
 }
 
 ::-webkit-scrollbar {
@@ -23,7 +22,6 @@
 /* Allows for the background to be blurred but not the children */
 .App::before {
   content: '';
-  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
