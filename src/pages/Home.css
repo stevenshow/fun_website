@@ -46,12 +46,6 @@ div > img {
   background-attachment: fixed;
 }
 
-.home .header {
-  border: 1px solid var(--terminal-green);
-  ;
-  padding-left: 1em;
-}
-
 .title {
   border-top: 2px solid var(--terminal-green);
   border-bottom: 2px solid var(--terminal-green); 

@@ -1,6 +1,8 @@
 .header {
   display: grid;
   grid-template-columns: 10fr 1fr;
+  border: 1px solid var(--terminal-green);
+  padding-left: 1em;
 }
 
 .header * {
