@@ -1,19 +1,19 @@
 import "./App.css";
 import Home from "./pages/Home.js";
+import TopBar from "./components/TopBar"
+import Projects from "./pages/Projects"
 // import Contact from "./pages/Contact.js"
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <BrowserRouter>
+   <Router>
+      <TopBar/>
       <Routes>
-      {/* <div className="App"> */}
-        <Route exact path='/' element={<Home/>}/>
-        {/* <Route path='/about' element={<Contact/>}> */}
-        {/* <Home /> */}
-      {/* </div> */}
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<Projects/>}/>
       </Routes>
-    </BrowserRouter>
+    </Router> 
   );
 };
 
