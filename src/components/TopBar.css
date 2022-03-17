@@ -59,3 +59,51 @@
   border-bottom: 1px solid var(--terminal-green);
   border-top: 1px solid var(--terminal-green);
 }
+
+.dropdown {
+  /* border: 1px solid var(--terminal-green); */
+  display: grid;
+  position: relative;
+}
+
+.dropbtn {
+  border-top: 1px solid var(--terminal-green);
+  border-left: 1px solid var(--terminal-green);
+  border-bottom: 1px solid var(--terminal-green);
+}
+
+.dropbtn:active {
+  border-right: none;
+}
+
+.dropdown-content {
+  display: none;
+  min-width: fit-content;
+  position: absolute;
+}
+
+.dropdown-content button {
+  border: 1px solid var(--terminal-green);
+}
+
+button.green-button {
+  color: rgb(23, 199, 23);
+}
+
+button.pink-button {
+  color: rgb(255,16,240);
+}
+
+button.light-blue-button {
+  color: rgb(131, 238, 255);
+}
+
+.dropdown-content button:hover {
+  /* color: var(--terminal-blue); */
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  right: 4.35em;
+  top: 2.59em;
+}
