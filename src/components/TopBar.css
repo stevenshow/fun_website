@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: 10fr 1fr;
+  grid-template-columns: 10fr auto 1fr;
   border: 1px solid var(--terminal-green);
   padding-left: 1em;
 }
@@ -17,12 +17,21 @@
   margin: 0;
 }
 
+.header button {
+  background-color: black;
+  color: white;
+}
+
 .header .green-highlight {
   color: var(--terminal-green);
 }
 
 .header .blue-highlight {
   color: var(--terminal-blue);
+}
+
+.header .pink-highlight {
+  color: var(--terminal-pink);
 }
 
 .cursor {
@@ -40,7 +49,7 @@
 .link {
   background: none;
   border-left: 1px solid var(--terminal-green);
-  color: var(--terminal-green);
+  color: white;
   display: grid;
   text-align: center;
   text-decoration: none;

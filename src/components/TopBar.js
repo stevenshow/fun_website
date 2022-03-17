@@ -1,6 +1,18 @@
 import "./TopBar.css";
 import { Link } from "react-router-dom";
 
+
+{/* <Dropdown>
+  <Dropdown.Toggle variant="success" id="dropdown-basic">
+    Dropdown Button
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown> */}
 const TopBar = () => {
   return (
     <div className="header">
@@ -14,13 +26,8 @@ const TopBar = () => {
         <span className="blue-highlight">~</span>$
         <span className="cursor"> _</span>
       </p>
+        <button>Click Me</button>
       <div className="links-right">
-        {/* <button type="button" className="home-nav">
-          Home
-        </button>
-        <button type="button" className="projects-nav">
-          Projects
-        </button> */}
         <Link className="link" to="/">Home</Link>
         <Link className="link projects-nav" to="/projects">Projects</Link>
         <Link className="link" to="/contact">Contact</Link>
