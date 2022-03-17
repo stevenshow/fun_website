@@ -72,7 +72,7 @@ const cards = [
 const Home = () => {
   return (
     <div className="home">
-      <TopBar />
+      {/* <TopBar /> */}
       <div className="cardHolder">
         {cards.map((card) => (
           <div className="card" key={card.id}>

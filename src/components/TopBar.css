@@ -1,11 +1,13 @@
 .header {
   display: grid;
   grid-template-columns: 10fr 1fr;
+  border: 1px solid var(--terminal-green);
+  padding-left: 1em;
 }
 
 .header * {
-  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
-    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+  /* font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New; */
   font-size: 1.2rem;
 }
 
@@ -35,15 +37,16 @@
 }
 
 .links-right,
-button {
+.link {
   background: none;
-  border: none;
   border-left: 1px solid var(--terminal-green);
-  color: white;
+  color: var(--terminal-green);
   display: grid;
+  text-align: center;
+  text-decoration: none;
 }
 
-button:hover {
+.link:hover {
   color: var(--terminal-blue);
 }
 

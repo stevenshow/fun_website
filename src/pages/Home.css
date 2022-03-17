@@ -1,6 +1,5 @@
 .cardHolder {
   display: grid;
-  height: 100%;
   padding: 2%;
   gap: 3% 2%;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -45,12 +44,6 @@ div > img {
   /* background-image: url("../img/linking_lines.png"); */
   background-color: black;
   background-attachment: fixed;
-}
-
-.home .header {
-  border: 1px solid var(--terminal-green);
-  ;
-  padding-left: 1em;
 }
 
 .title {
