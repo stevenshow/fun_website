@@ -13,7 +13,9 @@ import { Link } from "react-router-dom";
     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown> */}
-const TopBar = () => {
+
+
+const TopBar = (props) => {
   return (
     <div className="header">
       <div>
@@ -26,7 +28,7 @@ const TopBar = () => {
         <span className="blue-highlight">~</span>$
         <span className="cursor"> _</span>
       </div>
-        <button>Click Me</button>
+        <button onClick={props.themeChange}>Click Me</button>
       <div className="links-right">
         <Link className="link" to="/">Home</Link>
         <Link className="link projects-nav" to="/projects">Projects</Link>

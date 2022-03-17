@@ -1,7 +1,12 @@
-:root {
+:root .green{
   --terminal-green: rgb(23, 199, 23);
   --terminal-blue: rgb(21, 115, 255);
   --terminal-pink: rgb(255,16,240);
+}
+
+:root .pink {
+  --terminal-green: rgb(255,16,240);
+  --terminal-blue: rgb(21, 115, 255);
 }
 
 body {

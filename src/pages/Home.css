@@ -48,7 +48,7 @@ div > img {
 
 .title {
   border-top: 2px solid var(--terminal-green);
-  border-bottom: 2px solid var(--terminal-green); 
+  border-bottom: 2px solid var(--terminal-green);
   margin-top: 15px;
   font-size: 1.7em;
   color: rgb(218, 218, 218);
