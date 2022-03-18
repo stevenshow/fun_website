@@ -107,3 +107,12 @@ button.light-blue-button {
   right: 4.16em;
   top: 2.68em;
 }
+
+.command {
+  background-color: black;
+  border: none;
+  color: white;
+  padding-left: 10px;
+  outline: none;
+  width: 40%;
+}
