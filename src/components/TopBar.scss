@@ -115,4 +115,12 @@ button.light-blue-button {
   padding-left: 10px;
   outline: none;
   width: 40%;
+
+  &.valid {
+    color: var(--terminal-primary)
+  }
+
+  &.invalid {
+    color: red;
+  }
 }
