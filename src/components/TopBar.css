@@ -1,7 +1,7 @@
 .header {
   display: grid;
   grid-template-columns: 10fr auto 1fr;
-  border: 1px solid var(--terminal-green);
+  border: 1px solid var(--terminal-primary);
   padding-left: 1em;
 }
 
@@ -23,11 +23,11 @@
 }
 
 .header .green-highlight {
-  color: var(--terminal-green);
+  color: var(--terminal-primary);
 }
 
 .header .blue-highlight {
-  color: var(--terminal-blue);
+  color: var(--terminal-secondary);
 }
 
 .cursor {
@@ -44,7 +44,7 @@
 .links-right,
 .link {
   background: none;
-  border-left: 1px solid var(--terminal-green);
+  border-left: 1px solid var(--terminal-primary);
   color: white;
   display: grid;
   text-align: center;
@@ -52,25 +52,25 @@
 }
 
 .link:hover {
-  color: var(--terminal-blue);
+  color: var(--terminal-secondary);
 }
 
 .projects-nav {
-  border-bottom: 1px solid var(--terminal-green);
-  border-top: 1px solid var(--terminal-green);
+  border-bottom: 1px solid var(--terminal-primary);
+  border-top: 1px solid var(--terminal-primary);
 }
 
 .dropdown {
-  /* border: 1px solid var(--terminal-green); */
+  /* border: 1px solid var(--terminal-primary); */
   align-items: end;
   display: grid;
   position: relative;
 }
 
 .dropbtn {
-  border-top: 1px solid var(--terminal-green);
-  border-left: 1px solid var(--terminal-green);
-  border-bottom: 1px solid var(--terminal-green);
+  border-top: 1px solid var(--terminal-primary);
+  border-left: 1px solid var(--terminal-primary);
+  border-bottom: 1px solid var(--terminal-primary);
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -83,7 +83,7 @@
 }
 
 .dropdown-content button {
-  border: 1px solid var(--terminal-green);
+  border: 1px solid var(--terminal-primary);
 }
 
 button.green-button {
@@ -99,7 +99,7 @@ button.light-blue-button {
 }
 
 .dropdown-content button:hover {
-  /* color: var(--terminal-blue); */
+  /* color: var(--terminal-secondary); */
 }
 
 .dropdown:hover .dropdown-content {

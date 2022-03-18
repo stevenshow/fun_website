@@ -1,16 +1,23 @@
-:root .green {
+:root {
   --terminal-green: rgb(23, 199, 23);
   --terminal-blue: rgb(21, 115, 255);
+  --terminal-pink: rgb(255,16,240);
+  --terminal-lblue: rgb(131,238,255);
+}
+
+:root .green {
+  --terminal-primary: var(--terminal-green);
+  --terminal-secondary: var(--terminal-blue);
 }
 
 :root .pink {
-  --terminal-green: rgb(255,16,240);
-  --terminal-blue: rgb(21, 115, 255);
+  --terminal-primary: var(--terminal-pink);
+  --terminal-secondary: var(--terminal-blue);
 }
 
 :root .lightblue {
-  --terminal-green: rgb(131, 238, 255);
-  --termina-blue: rgb(21, 115, 255);
+  --terminal-primary: var(--terminal-lblue);
+  --termina-secondary: var(--terminal-blue);
 }
 
 body {
