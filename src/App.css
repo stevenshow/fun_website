@@ -10,7 +10,7 @@
   background: black;
 }
 
-// Need to figure out how to override this or let the var update the scrollbar color
+/* Need to figure out how to override this or let the var update the scrollbar color*/
 ::-webkit-scrollbar-thumb {
   /* background: var(--terminal-primary); */
   background: black;
