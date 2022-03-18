@@ -18,9 +18,9 @@ const TopBar = (props) => {
       <div className="dropdown">
         <div className="dropbtn">Colors</div>
         <div className="dropdown-content">
-          <button className="green-button" onClick={props.changeGreen}>Green</button>
-          <button className="pink-button" onClick={props.changePink}>Pink</button>
-          <button className="light-blue-button" onClick={props.changeLightBlue}>Blue</button>
+          <button className="green-button" onClick={() => props.changeTheme('green')}>Green</button>
+          <button className="pink-button" onClick={() => props.changeTheme('pink')}>Pink</button>
+          <button className="light-blue-button" onClick={() => props.changeTheme('lightblue')}>Blue</button>
         </div>
       </div>
       <div className="links-right">
