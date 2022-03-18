@@ -7,34 +7,9 @@ import Projects from "./pages/Projects";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function changeTheme(color) {
-  console.log(document.getElementById("root").classList.length)
   let element = document.getElementById("root");
   element.classList.remove(...element.classList);
   document.getElementById("root").classList.toggle(color);
-
-  // if (document.getElementById("root").classList.contains("pink")) {
-  //   document.getElementById("root").classList.toggle("pink");
-  // }
-
-  // if (document.getElementById("root").classList.contains("lightblue")) {
-  //   document.getElementById("root").classList.toggle("lightblue");
-  // }
-}
-
-function changePink() {
-  // if (document.getElementById("root").classList.contains("lightblue")) {
-  //   document.getElementById("root").classList.toggle("lightblue");
-  // }
-
-  document.getElementById("root").classList.toggle("pink");
-}
-
-function changeLightBlue() {
-  // if (document.getElementById("root").classList.contains("pink")) {
-  //   document.getElementById("root").classList.toggle("pink");
-  // }
-
-  document.getElementById("root").classList.toggle("lightblue");
 }
 
 const App = () => {
