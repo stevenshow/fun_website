@@ -1,10 +1,10 @@
 import "./TopBar.css";
 import { Link } from "react-router-dom";
 
-const TopBar = () => {
+const TopBar = (props) => {
   return (
     <div className="header">
-      <p>
+      <div>
         <span className="green-highlight">steven@schoebinger</span>:
         <span className="blue-highlight">~</span>$
         <span className="green-highlight"> echo </span>Welcome to{" "}
@@ -13,33 +13,29 @@ const TopBar = () => {
         <span className="green-highlight">steven@schoebinger</span>:
         <span className="blue-highlight">~</span>$
         <span className="cursor"> _</span>
-      </p>
+      </div>
+      {/* <button onClick={props.themeChange}>Click Me</button> */}
+      <div className="dropdown">
+        <div className="dropbtn">Colors</div>
+        <div className="dropdown-content">
+          <button className="green-button" onClick={() => props.changeTheme('green')}>Green</button>
+          <button className="pink-button" onClick={() => props.changeTheme('pink')}>Pink</button>
+          <button className="light-blue-button" onClick={() => props.changeTheme('lightblue')}>Blue</button>
+        </div>
+      </div>
       <div className="links-right">
-        {/* <button type="button" className="home-nav">
+        <Link className="link" to="/">
           Home
-        </button>
-        <button type="button" className="projects-nav">
+        </Link>
+        <Link className="link projects-nav" to="/projects">
           Projects
-        </button> */}
-        <Link className="link" to="/">Home</Link>
-        <Link className="link projects-nav" to="/projects">Projects</Link>
-        <Link className="link" to="/contact">Contact</Link>
+        </Link>
+        <Link className="link" to="/contact">
+          Contact
+        </Link>
       </div>
     </div>
   );
 };
 
 export default TopBar;
-
-// <div class="topnav">
-//   <a className="home-nav" href="home">
-//     Home
-//   </a>
-//   <a className="projects-nav" href="projects">
-//     Projects
-//   </a>
-//   <a className="contact-nav" href="contact">
-//     Contact
-//   </a>
-//   {/* <a href="about">About</a> */}
-// </div>

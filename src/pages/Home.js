@@ -1,5 +1,4 @@
 import "./Home.css";
-import TopBar from "../components/TopBar";
 import rasp from "../img/raspberrypi.png";
 import linux from "../img/linux_logo.png";
 import python from "../img/python_logo.png";
@@ -64,7 +63,7 @@ const cards = [
     name: "Front End Development",
     alt: "utah valley university logo",
     image: uvu,
-    id: 4,
+    id: 5,
     content: `Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. The challenge associated with front end development is that the tools and techniques used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.`,
   },
 ];
@@ -72,7 +71,6 @@ const cards = [
 const Home = () => {
   return (
     <div className="home">
-      {/* <TopBar /> */}
       <div className="cardHolder">
         {cards.map((card) => (
           <div className="card" key={card.id}>

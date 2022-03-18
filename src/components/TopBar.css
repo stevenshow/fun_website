@@ -1,28 +1,33 @@
 .header {
   display: grid;
-  grid-template-columns: 10fr 1fr;
-  border: 1px solid var(--terminal-green);
+  grid-template-columns: 10fr auto 1fr;
+  border: 1px solid var(--terminal-primary);
   padding-left: 1em;
 }
 
 .header * {
-  /* font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
-    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New; */
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
   font-size: 1.2rem;
 }
 
-.header > p {
+.header > div {
   color: white;
   font-weight: bold;
   margin: 0;
 }
 
+.header button {
+  background-color: black;
+  color: white;
+}
+
 .header .green-highlight {
-  color: var(--terminal-green);
+  color: var(--terminal-primary);
 }
 
 .header .blue-highlight {
-  color: var(--terminal-blue);
+  color: var(--terminal-secondary);
 }
 
 .cursor {
@@ -39,18 +44,66 @@
 .links-right,
 .link {
   background: none;
-  border-left: 1px solid var(--terminal-green);
-  color: var(--terminal-green);
+  border-left: 1px solid var(--terminal-primary);
+  color: white;
   display: grid;
   text-align: center;
   text-decoration: none;
 }
 
 .link:hover {
-  color: var(--terminal-blue);
+  color: var(--terminal-secondary);
 }
 
 .projects-nav {
-  border-bottom: 1px solid var(--terminal-green);
-  border-top: 1px solid var(--terminal-green);
+  border-bottom: 1px solid var(--terminal-primary);
+  border-top: 1px solid var(--terminal-primary);
+}
+
+.dropdown {
+  /* border: 1px solid var(--terminal-primary); */
+  align-items: end;
+  display: grid;
+  position: relative;
+}
+
+.dropbtn {
+  border-top: 1px solid var(--terminal-primary);
+  border-left: 1px solid var(--terminal-primary);
+  border-bottom: 1px solid var(--terminal-primary);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  min-width: fit-content;
+  height: 27.5px;
+  position: absolute;
+}
+
+.dropdown-content button {
+  border: 1px solid var(--terminal-primary);
+}
+
+button.green-button {
+  color: rgb(23, 199, 23);
+}
+
+button.pink-button {
+  color: rgb(255,16,240);
+}
+
+button.light-blue-button {
+  color: rgb(131, 238, 255);
+}
+
+.dropdown-content button:hover {
+  /* color: var(--terminal-secondary); */
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  right: 4.16em;
+  top: 2.68em;
 }

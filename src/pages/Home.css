@@ -7,7 +7,7 @@
 
 .card {
   border-radius: 5px;
-  border: 1px solid var(--terminal-green);
+  border: 1px solid var(--terminal-primary);
   transition: 0.3s;
   width: 100%;
   max-height: fit-content;
@@ -47,8 +47,8 @@ div > img {
 }
 
 .title {
-  border-top: 2px solid var(--terminal-green);
-  border-bottom: 2px solid var(--terminal-green); 
+  border-top: 2px solid var(--terminal-primary);
+  border-bottom: 2px solid var(--terminal-primary);
   margin-top: 15px;
   font-size: 1.7em;
   color: rgb(218, 218, 218);
