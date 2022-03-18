@@ -1,7 +1,6 @@
 # Terminal Website
 
-## This website was created in hopes that I could relay my love for computers and the terminal.  I hope that you are able to enjoy and see my passion and possibly take inspiration away from this to create or add on something of your own. 
-
+## This website was created in hopes that I could relay my love for computers and the terminal.  I hope that you are able to enjoy and see my passion and possibly take inspiration away from this to create or add onto something of your own. 
 
 # Getting Started with Create React App
 
