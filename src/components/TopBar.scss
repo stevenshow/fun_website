@@ -3,31 +3,26 @@
   grid-template-columns: auto;
   border: 1px solid var(--terminal-primary);
   padding-left: 1em;
-}
 
-.header * {
-  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
-    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
-  font-size: 1.2rem;
-}
+  & * {
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+    font-size: 1.2rem;
+  }
 
-.header>div {
-  color: white;
-  font-weight: bold;
-  margin: 0;
-}
+  & > div {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+  }
 
-.header button {
-  background-color: black;
-  color: white;
-}
+  & .green-highlight {
+    color: var(--terminal-primary);
+  }
 
-.header .green-highlight {
-  color: var(--terminal-primary);
-}
-
-.header .blue-highlight {
-  color: var(--terminal-secondary);
+  & .blue-highlight {
+    color: var(--terminal-secondary);
+  }
 }
 
 .cursor {
@@ -80,24 +75,22 @@
   min-width: fit-content;
   height: 27.5px;
   position: absolute;
-}
 
-.dropdown-content button {
-  border: 1px solid var(--terminal-primary);
+  & button {
+    border: 1px solid var(--terminal-primary);
+  }
 }
 
 button {
-
   &.green-button {
     color: rgb(23, 199, 23);
+  }
+  &.pink-button {
+    color: rgb(255, 16, 240);
+  }
 
-    &.pink-button {
-      color: rgb(255, 16, 240);
-    }
-
-    button.light-blue-button {
-      color: rgb(131, 238, 255);
-    }
+  &.light-blue-button {
+    color: rgb(131, 238, 255);
   }
 }
 
@@ -120,7 +113,7 @@ button {
   width: 55%;
 
   &.valid {
-    color: var(--terminal-primary)
+    color: var(--terminal-primary);
   }
 
   &.invalid {
