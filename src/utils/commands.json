@@ -1,0 +1,15 @@
+{
+  "Valid": ["color", "cd", "echo", "linkedin", "help"],
+  "Commands": [
+    {
+      "command": "color",
+      "execute": "theme",
+      "parameters": ["pink", "green", "lightblue"]
+    },
+    {
+      "command": "cd",
+      "execute": "navigate",
+      "parameters": ["home", "projects", "contact"]
+    }
+  ]
+}
