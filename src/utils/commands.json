@@ -4,7 +4,7 @@
     {
       "command": "color",
       "execute": "theme",
-      "parameters": ["pink", "green", "lightblue"]
+      "parameters": ["pink", "green", "lightblue", "orange", "white", "purple"]
     },
     {
       "command": "cd",
