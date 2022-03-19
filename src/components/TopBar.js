@@ -7,23 +7,26 @@ const changeTheme = (color) => {
   let element = document.getElementById("root");
   element.classList.remove(...element.classList);
   document.getElementById("root").classList.toggle(color);
-}
+};
 
 const executeCommand = (userCommand, userParameters) => {
-  console.log('command:', userCommand)
-  console.log('parameters:', ...userParameters)
+  console.log("command:", userCommand);
+  console.log("parameters:", ...userParameters);
 
   commands.forEach(({ command, execute, parameters }) => {
-    console.log(command, userCommand)
-    console.log(execute !== undefined && userCommand === command)
+    // console.log(command, userCommand);
+    // console.log(execute !== undefined && userCommand === command);
     if (execute !== undefined && userCommand === command) {
       switch (execute) {
         case "theme":
-          changeTheme(...userParameters)
+          changeTheme(...userParameters);
           break;
         case "navigate":
-          let nav = document.getElementById(userParameters);
-          console.log(nav)
+          let nav = document.getElementById(...userParameters);
+          console.log(userParameters === "home")
+          console.log(userParameters)
+          let dir = userParameters[0] === "home" ? "" : `${userParameters}`;
+          document.querySelector(".directory").textContent = dir;
           nav.click();
           break;
         default:
@@ -31,7 +34,7 @@ const executeCommand = (userCommand, userParameters) => {
       }
     }
   });
-}
+};
 
 function Command() {
   const [input, setInput] = useState(""); // '' is the initial state value
@@ -41,40 +44,35 @@ function Command() {
   const clearInput = () => {
     setInput("");
     document.querySelector(".command").classList.remove("red");
-  }
+  };
 
   const handle = () => {
     // Going to probably need regex to test for valid command and arg
-    console.log(valid)
     if (valid) {
-
       // execute command
       let parameters = input.split(" ").slice(1);
-      executeCommand(command[0], parameters)
+      executeCommand(command[0], parameters);
       // clear input
       clearInput();
-    }
-    else {
+    } else {
       // give error message
-      setInput(`try typing 'help'`)
+      setInput(`try typing 'help'`);
       // clear input
-      setTimeout(clearInput, 1000)
+      setTimeout(clearInput, 1000);
     }
   };
-// setting the state seems to not update as soon as keeping the valid variable does
-// figure out either how to keep valid usable in handle() or update state fast
+  // setting the state seems to not update as soon as keeping the valid variable does
+  // figure out either how to keep valid usable in handle() or update state fast
   const checkCommand = () => {
     command = input.split(" ");
     valid = commands[0].includes(command[0]) || command[0] === "";
     if (valid) {
       document.querySelector(".command").classList.add("valid");
       document.querySelector(".command").classList.remove("invalid");
-    }
-
-    else {
+    } else {
       document.querySelector(".command").classList.add("invalid");
     }
-  }
+  };
 
   return (
     <input
@@ -94,17 +92,16 @@ const TopBar = (props) => {
     <div className="header">
       <div>
         <span className="green-highlight">steven@schoebinger</span>:
-        <span className="blue-highlight">~</span>$
+        <span className="blue-highlight">~/</span>$
         <span className="green-highlight"> echo </span>Welcome to{" "}
         <span className="blue-highlight">$NAME\'s</span> website!
         <div>Welcome to Steven's website!</div>
         <span className="green-highlight">steven@schoebinger</span>:
-        <span className="blue-highlight">~</span>${/* <Enter /> */}
+        <span className="blue-highlight">~/</span>
+        <span className="directory blue-highlight"></span>$
         <Command />
-        {/* <span className="cursor"> _</span> */}
       </div>
-      {/* <button onClick={props.themeChange}>Click Me</button> */}
-      <div className="dropdown">
+      {/* <div className="dropdown">
         <div className="dropbtn">Colors</div>
         <div className="dropdown-content">
           <button
@@ -126,7 +123,7 @@ const TopBar = (props) => {
             Blue
           </button>
         </div>
-      </div>
+      </div> */}
       <div className="links-right">
         <Link id="home" className="link" to="/">
           Home

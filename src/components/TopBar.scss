@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: 10fr auto 1fr;
+  grid-template-columns: auto;
   border: 1px solid var(--terminal-primary);
   padding-left: 1em;
 }
@@ -11,7 +11,7 @@
   font-size: 1.2rem;
 }
 
-.header > div {
+.header>div {
   color: white;
   font-weight: bold;
   margin: 0;
@@ -46,7 +46,7 @@
   background: none;
   border-left: 1px solid var(--terminal-primary);
   color: white;
-  display: grid;
+  display: none;
   text-align: center;
   text-decoration: none;
 }
@@ -86,16 +86,19 @@
   border: 1px solid var(--terminal-primary);
 }
 
-button.green-button {
-  color: rgb(23, 199, 23);
-}
+button {
 
-button.pink-button {
-  color: rgb(255,16,240);
-}
+  &.green-button {
+    color: rgb(23, 199, 23);
 
-button.light-blue-button {
-  color: rgb(131, 238, 255);
+    &.pink-button {
+      color: rgb(255, 16, 240);
+    }
+
+    button.light-blue-button {
+      color: rgb(131, 238, 255);
+    }
+  }
 }
 
 .dropdown-content button:hover {
@@ -114,7 +117,7 @@ button.light-blue-button {
   color: white;
   padding-left: 10px;
   outline: none;
-  width: 40%;
+  width: 55%;
 
   &.valid {
     color: var(--terminal-primary)
