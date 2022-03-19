@@ -1,6 +1,7 @@
 import "./TopBar.scss";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { validateNav, validateColor } from "../utils/checkers"
 const commands = require("../utils/commands");
 
 const changeTheme = (color) => {
@@ -9,25 +10,27 @@ const changeTheme = (color) => {
   document.getElementById("root").classList.toggle(color);
 };
 
-const executeCommand = (userCommand, userParameters) => {
+const executeCommand = (userCommand, ...userParams) => {
+  console.log(userParams)
   console.log("command:", userCommand);
-  console.log("parameters:", ...userParameters);
+  console.log("parameters:", userParams);
 
-  commands.forEach(({ command, execute, parameters }) => {
-    // console.log(command, userCommand);
-    // console.log(execute !== undefined && userCommand === command);
-    if (execute !== undefined && userCommand === command) {
+  commands["Commands"].forEach(({ command, execute }) => {
+    if (userCommand === command) {
       switch (execute) {
         case "theme":
-          changeTheme(...userParameters);
+          if (validateColor(userParams)) {
+            changeTheme(...userParams);
+          }
           break;
         case "navigate":
-          let nav = document.getElementById(...userParameters);
-          console.log(userParameters === "home")
-          console.log(userParameters)
-          let dir = userParameters[0] === "home" ? "" : `${userParameters}`;
-          document.querySelector(".directory").textContent = dir;
-          nav.click();
+          if (userParams[0] === ".") userParams[0] = "home";
+          if (validateNav(userParams)) {
+            let nav = document.getElementById(...userParams);
+            let dir = userParams[0] === "home" ? "" : `${userParams}`;
+            document.querySelector(".directory").textContent = dir;
+            nav.click();
+          }
           break;
         default:
           break;
@@ -51,7 +54,7 @@ function Command() {
     if (valid) {
       // execute command
       let parameters = input.split(" ").slice(1);
-      executeCommand(command[0], parameters);
+      executeCommand(command[0], ...parameters);
       // clear input
       clearInput();
     } else {
@@ -65,7 +68,7 @@ function Command() {
   // figure out either how to keep valid usable in handle() or update state fast
   const checkCommand = () => {
     command = input.split(" ");
-    valid = commands[0].includes(command[0]) || command[0] === "";
+    valid = commands["Valid"].includes(command[0]) || command[0] === "";
     if (valid) {
       document.querySelector(".command").classList.add("valid");
       document.querySelector(".command").classList.remove("invalid");
