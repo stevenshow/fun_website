@@ -1,6 +1,6 @@
 [
   ["color",
-  "page",
+  "cd",
   "echo",
   "linkedin",
   "help"
@@ -8,6 +8,11 @@
   {
     "command": "color",
     "execute": "theme",
-    "parameters": ["pink"]
+    "parameters": ["pink", "green", "lightblue"]
+  },
+  {
+    "command": "cd",
+    "execute": "navigate",
+    "parameters": ["home", "projects", "contact"]
   }
 ]

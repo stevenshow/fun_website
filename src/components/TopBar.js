@@ -2,7 +2,6 @@ import "./TopBar.scss";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 const commands = require("../utils/commands");
-// console.log(commands)
 
 const changeTheme = (color) => {
   let element = document.getElementById("root");
@@ -13,12 +12,19 @@ const changeTheme = (color) => {
 const executeCommand = (userCommand, userParameters) => {
   console.log('command:', userCommand)
   console.log('parameters:', ...userParameters)
-  commands.forEach(({ command, execute, parameters }) => {
 
+  commands.forEach(({ command, execute, parameters }) => {
+    console.log(command, userCommand)
+    console.log(execute !== undefined && userCommand === command)
     if (execute !== undefined && userCommand === command) {
       switch (execute) {
         case "theme":
           changeTheme(...userParameters)
+          break;
+        case "navigate":
+          let nav = document.getElementById(userParameters);
+          console.log(nav)
+          nav.click();
           break;
         default:
           break;
@@ -26,7 +32,6 @@ const executeCommand = (userCommand, userParameters) => {
     }
   });
 }
-
 
 function Command() {
   const [input, setInput] = useState(""); // '' is the initial state value
@@ -123,13 +128,13 @@ const TopBar = (props) => {
         </div>
       </div>
       <div className="links-right">
-        <Link className="link" to="/">
+        <Link id="home" className="link" to="/">
           Home
         </Link>
-        <Link className="link projects-nav" to="/projects">
+        <Link id="projects" className="link projects-nav" to="/projects">
           Projects
         </Link>
-        <Link className="link" to="/contact">
+        <Link id="contact" className="link" to="/contact">
           Contact
         </Link>
       </div>
