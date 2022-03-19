@@ -1,5 +1,3 @@
-import { isElementType } from "@testing-library/user-event/dist/utils";
-
 const commands = require("./commands")
 
 export const validateNav = (userParam) => {

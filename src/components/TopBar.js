@@ -1,46 +1,11 @@
 import "./TopBar.scss";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { validateNav, validateColor } from "../utils/checkers"
+import { changeTheme, executeCommand } from "../utils/execution"
 const commands = require("../utils/commands");
 
-const changeTheme = (color) => {
-  let element = document.getElementById("root");
-  element.classList.remove(...element.classList);
-  document.getElementById("root").classList.toggle(color);
-};
-
-const executeCommand = (userCommand, ...userParams) => {
-  console.log(userParams)
-  console.log("command:", userCommand);
-  console.log("parameters:", userParams);
-
-  commands["Commands"].forEach(({ command, execute }) => {
-    if (userCommand === command) {
-      switch (execute) {
-        case "theme":
-          if (validateColor(userParams)) {
-            changeTheme(...userParams);
-          }
-          break;
-        case "navigate":
-          if (userParams[0] === ".") userParams[0] = "home";
-          if (validateNav(userParams)) {
-            let nav = document.getElementById(...userParams);
-            let dir = userParams[0] === "home" ? "" : `${userParams}`;
-            document.querySelector(".directory").textContent = dir;
-            nav.click();
-          }
-          break;
-        default:
-          break;
-      }
-    }
-  });
-};
-
 function Command() {
-  const [input, setInput] = useState(""); // '' is the initial state value
+  const [input, setInput] = useState("");
   let valid;
   let command;
 
@@ -64,8 +29,7 @@ function Command() {
       setTimeout(clearInput, 1000);
     }
   };
-  // setting the state seems to not update as soon as keeping the valid variable does
-  // figure out either how to keep valid usable in handle() or update state fast
+
   const checkCommand = () => {
     command = input.split(" ");
     valid = commands["Valid"].includes(command[0]) || command[0] === "";
