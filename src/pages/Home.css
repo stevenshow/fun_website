@@ -19,9 +19,10 @@
   }
 }
 
-.card:hover .content, .card:hover .title {
+.card:hover .content,
+.card:hover .title {
   color: white;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 .content {
