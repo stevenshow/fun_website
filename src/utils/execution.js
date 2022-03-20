@@ -20,13 +20,18 @@ export const executeCommand = (userCommand, ...userParams) => {
             changeTheme(...userParams);
           }
           break;
-        case "navigate":
+        case "changeDirectory":
           if (userParams[0] === ".") userParams[0] = "home";
           if (validateNav(userParams)) {
             let nav = document.getElementById(...userParams);
             let dir = userParams[0] === "home" ? "" : `${userParams}`;
             document.querySelector(".directory").textContent = dir;
             nav.click();
+          }
+          break;
+        case "list":
+          if (true) {
+            document.getElementsByClassName()
           }
           break;
         default:

@@ -1,4 +1,5 @@
 import './TopBar.scss'
+import Prompt from './Prompt'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { changeTheme, executeCommand } from '../utils/execution'
@@ -11,7 +12,7 @@ function Command() {
 
   const clearInput = () => {
     setInput('')
-    document.querySelector('.command').classList.remove('invalid')
+    document.querySelector('.currentcommand').classList.remove('invalid')
   }
 
   const handle = () => {
@@ -35,17 +36,17 @@ function Command() {
     command = input.split(' ')
     valid = commands['Valid'].includes(command[0]) || command[0] === ''
     if (valid) {
-      document.querySelector('.command').classList.add('valid')
-      document.querySelector('.command').classList.remove('invalid')
+      document.querySelector('.currentcommand').classList.add('valid')
+      document.querySelector('.currentcommand').classList.remove('invalid')
     } else {
-      document.querySelector('.command').classList.add('invalid')
+      document.querySelector('.currentcommand').classList.add('invalid')
     }
   }
 
   return (
     <input
       autoFocus
-      className={`command valid`}
+      className={`currentcommand valid`}
       onInput={(e) => setInput(e.target.value)}
       onKeyDown={(e) => e.key === 'Enter' && handle()}
       onKeyUp={() => checkCommand()}
@@ -67,6 +68,9 @@ const TopBar = (props) => {
         <span className='green-highlight'>steven@schoebinger</span>:
         <span className='blue-highlight'>~/</span>
         <span className='directory blue-highlight'></span>$
+        {/* <br></br>
+        <span className='test'>test</span> */}
+        <Prompt prevCommand="color orange" classes="command valid"/>
         <Command />
       </div>
       {/* <div className="dropdown">

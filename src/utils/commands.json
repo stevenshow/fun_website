@@ -8,8 +8,13 @@
     },
     {
       "command": "cd",
-      "execute": "navigate",
+      "execute": "changeDirectory",
       "parameters": ["home", "projects", "contact"]
+    },
+    {
+      "command": "ls",
+      "execute": "list",
+      "parameters": []
     }
   ]
 }

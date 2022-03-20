@@ -104,7 +104,7 @@ button {
   top: 2.68em;
 }
 
-.command {
+.currentcommand {
   background-color: black;
   border: none;
   color: white;
@@ -119,4 +119,13 @@ button {
   &.invalid {
     color: red;
   }
+}
+
+.command {
+  background-color: black;
+  border: none;
+  color: var(--terminal-primary);
+  padding-left: 10px;
+  outline: none;
+  width: 55%;
 }
