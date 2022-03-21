@@ -57,10 +57,7 @@ function Command() {
     />
   )
 }
-
-function HelpModal() {
-  
-}
+// Need to figure out how to get setIsOpen to change to true when the execute command is run successfully in <Command>
 const TopBar = (props) => {
   Modal.setAppElement('#root');
   const [modalIsOpen, setIsOpen] = useState(false)
