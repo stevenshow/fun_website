@@ -1,20 +1,43 @@
 {
-  "Valid": ["color", "cd", "echo", "linkedin", "help"],
-  "Commands": [
-    {
-      "command": "color",
+  "Valid": [
+    "color",
+    "cd",
+    "echo",
+    "linkedin",
+    "github",
+    "help"
+  ],
+  "Commands": {
+    "color": {
       "execute": "theme",
-      "parameters": ["pink", "green", "lightblue", "orange", "white", "purple"]
+      "parameters": [
+        "pink",
+        "green",
+        "lightblue",
+        "orange",
+        "white",
+        "purple"
+      ]
     },
-    {
-      "command": "cd",
+    "cd": {
       "execute": "changeDirectory",
-      "parameters": ["home", "projects", "contact"]
+      "parameters": [
+        "home",
+        "projects",
+        "contact"
+      ]
     },
-    {
-      "command": "ls",
+    "ls": {
       "execute": "list",
-      "parameters": []
+      "parameters": [
+        "ls"
+      ]
+    },
+    "linkedin": {
+      "execute": "redirect",
+      "parameters": [
+        "linkedin"
+      ]
     }
-  ]
+  }
 }

@@ -70,7 +70,7 @@ const TopBar = (props) => {
         <span className='directory blue-highlight'></span>$
         {/* <br></br>
         <span className='test'>test</span> */}
-        <Prompt prevCommand="color orange" classes="command valid"/>
+        {/* <Prompt prevCommand="color orange" classes="command valid"/> */}
         <Command />
       </div>
       {/* <div className="dropdown">
