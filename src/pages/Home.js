@@ -3,6 +3,8 @@ import rasp from '../img/raspberrypi.png'
 import linux from '../img/linux_logo.png'
 import python from '../img/python_logo.png'
 import uvu from '../img/uvu_logo.png'
+import Modal from 'react-modal'
+import { useState } from 'react'
 
 const cards = [
   {
@@ -74,6 +76,41 @@ const cards = [
     content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
   },
 ]
+
+Modal.setAppElement('#root');
+function HelpModal() {
+  const [modalIsOpen, setIsOpen] = useState(false)
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  return (
+    <Modal
+    ariaHideApp={true}
+      className='help-modal'
+      isOpen={modalIsOpen}
+      // onAfterOpen={afterOpenModal}
+      onRequestClose={closeModal}
+      style={customStyles}
+      contentLabel='Help Modal'
+    />
+  )
+}
 
 const Home = () => {
   return (

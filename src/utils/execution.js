@@ -36,6 +36,9 @@ export const executeCommand = (userCommand, ...userParams) => {
     case 'github':
       window.open(`https://www.github.com/stevenshow/`)
       break
+    case 'help':
+      
+      break;
     default:
       break
   }

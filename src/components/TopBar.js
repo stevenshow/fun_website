@@ -1,5 +1,6 @@
 import './TopBar.scss'
 import Prompt from './Prompt'
+import Modal from 'react-modal'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { changeTheme, executeCommand } from '../utils/execution'
@@ -57,9 +58,45 @@ function Command() {
   )
 }
 
+function HelpModal() {
+  
+}
 const TopBar = (props) => {
+  Modal.setAppElement('#root');
+  const [modalIsOpen, setIsOpen] = useState(false)
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+  
+  function openModal() {
+    setIsOpen(true)
+  }
+  
+  function closeModal() {
+    setIsOpen(false)
+  }
+  // return (
+
+  // )
   return (
+    // <HelpModal>
     <div className='header'>
+          <Modal
+    ariaHideApp={false}
+      className='help-modal'
+      isOpen={modalIsOpen}
+      // onAfterOpen={afterOpenModal}
+      onRequestClose={closeModal}
+      style={customStyles}
+      contentLabel='Help Modal'
+    > <button onClick={closeModal}>close</button></Modal>
       <div>
         <span className='green-highlight'>steven@schoebinger</span>:
         <span className='blue-highlight'>~/</span>$
