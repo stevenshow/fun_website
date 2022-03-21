@@ -50,6 +50,7 @@ function Command() {
       onInput={(e) => setInput(e.target.value)}
       onKeyDown={(e) => e.key === 'Enter' && handle()}
       onKeyUp={() => checkCommand()}
+      spellCheck='false'
       type='text'
       value={input}
     />
