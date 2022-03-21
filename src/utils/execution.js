@@ -31,9 +31,10 @@ export const executeCommand = (userCommand, ...userParams) => {
       }
       break
     case 'linkedin':
-      if (validateCommand(userCommand, userParams)) {
-        window.open(`https://www.linkedin.com/in/steven-schoebinger/`)
-      }
+      window.open(`https://www.linkedin.com/in/steven-schoebinger/`)
+      break
+    case 'github':
+      window.open(`https://www.github.com/stevenshow/`)
       break
     default:
       break
