@@ -12,7 +12,7 @@ export const executeCommand = (userCommand, ...userParams) => {
   console.log('parameters:', userParams)
   switch (userCommand) {
     case 'color':
-      if (validateCommand(userCommand ,userParams)) {
+      if (validateCommand(userCommand, userParams)) {
         changeTheme(...userParams)
       }
       break
@@ -31,8 +31,8 @@ export const executeCommand = (userCommand, ...userParams) => {
       }
       break
     case 'linkedin':
-        if (validateCommand(userCommand, userParams)) {
-          window.open(`https://www.linkedin.com/in/steven-schoebinger/`)
+      if (validateCommand(userCommand, userParams)) {
+        window.open(`https://www.linkedin.com/in/steven-schoebinger/`)
       }
       break
     default:
