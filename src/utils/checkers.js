@@ -11,9 +11,5 @@ export const validateCommand = (command, userParam) => {
     valid = commands.Commands.cd.parameters.includes(...userParam)
   }
   
-  if (command === 'linkedin') {
-    valid = true
-  }
-  
   return valid
 }
