@@ -74,29 +74,6 @@ const TopBar = (props) => {
         {/* <Prompt prevCommand="color orange" classes="command valid"/> */}
         <Command />
       </div>
-      {/* <div className="dropdown">
-        <div className="dropbtn">Colors</div>
-        <div className="dropdown-content">
-          <button
-            className="green-button"
-            onClick={() => props.changeTheme("green")}
-          >
-            Green
-          </button>
-          <button
-            className="pink-button"
-            onClick={() => props.changeTheme("pink")}
-          >
-            Pink
-          </button>
-          <button
-            className="light-blue-button"
-            onClick={() => props.changeTheme("lightblue")}
-          >
-            Blue
-          </button>
-        </div>
-      </div> */}
       <div className='links-right'>
         <Link id='home' className='link' to='/'>
           Home
