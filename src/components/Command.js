@@ -101,9 +101,9 @@ const Command = () => {
           </ul>
           <h2 className='page'>cd &#60;page&#62;</h2>
           <ul className='pages'>
-              <li>
-                projects<span> - Navigates to projects page</span>
-              </li>
+            <li>
+              projects<span> - Navigates to projects page</span>
+            </li>
             <li>
               contact<span> - Navigates to contact page</span>
             </li>
