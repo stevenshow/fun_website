@@ -1,23 +1,6 @@
 import './TopBar.scss'
 import Command from './Command'
-import Prompt from './Prompt'
-import Modal from 'react-modal'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { changeTheme, executeCommand } from '../utils/execution'
-const commands = require('../utils/commands')
-
-const openModal = () => {
-  const modal = document.querySelector('.help-modal')
-  modal.showModal()
-  console.log('open', modal)
-}
-
-const closeModal = () => {
-  const modal = document.querySelector('.help-modal')
-  modal.close()
-  console.log('close', modal)
-}
 
 const TopBar = (props) => {
   return (
@@ -35,15 +18,6 @@ const TopBar = (props) => {
         <span className='test'>test</span> */}
         {/* <Prompt prevCommand="color orange" classes="command valid"/> */}
         <Command />
-        {/* <button onClick={openModal} className='show-modal'>
-          show
-        </button> */}
-        {/* <dialog className="help-modal">
-          <button className="close-modal">
-            x
-          </button>
-          Hello
-        </dialog> */}
       </div>
       <div className='links-right'>
         <Link id='home' className='link' to='/'>
