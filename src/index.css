@@ -1,12 +1,13 @@
 :root {
   --terminal-primary: rgb(23, 199, 23);
-  --terminal-secondary: rgb(21,115,255);
+  --terminal-secondary: rgb(21, 115, 255);
   --terminal-green: rgb(23, 199, 23);
   --terminal-blue: rgb(21, 115, 255);
-  --terminal-pink: rgb(255,39,242);
-  --terminal-lightblue: rgb(131,238,255);
-  --terminal-purple: rgb(176,38,255);
+  --terminal-pink: rgb(255, 39, 242);
+  --terminal-lightblue: rgb(131, 238, 255);
+  --terminal-purple: rgb(176, 38, 255);
   --terminal-white: white;
+  --terminal-orange: rgb(255, 115, 34);
 }
 
 :root .green {
@@ -24,12 +25,27 @@
   --termina-secondary: var(--terminal-blue);
 }
 
+:root .orange {
+  --terminal-primary: var(--terminal-orange);
+  --termina-secondary: var(--terminal-blue);
+}
+
+:root .white {
+  --terminal-primary: var(--terminal-white);
+  --termina-secondary: var(--terminal-blue);
+}
+
+:root .purple {
+  --terminal-primary: var(--terminal-purple);
+  --termina-secondary: var(--terminal-blue);
+}
+
 body {
   background: black;
   margin: 0;
   /* font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New; */
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

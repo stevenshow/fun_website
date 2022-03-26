@@ -1,21 +1,15 @@
-const commands = require("./commands")
+const commands = require('./commands')
 
-export const validateNav = (userParam) => {
-  let valid = false;
-  commands["Commands"].forEach(element => {
-    if (element.command === "cd") {
-      valid = element.parameters.includes(...userParam)
-    }
-  });
-  return valid;
-}
-
-export const validateColor = (userParam) => {
-  let valid = false;
-  commands["Commands"].forEach(element => {
-      if (element.command === "color") {
-        valid = element.parameters.includes(...userParam);
-      }
-  });
-  return valid;
+export const validateCommand = (command, userParam) => {
+  let valid = false
+  
+  if (command === 'color') {
+    valid = commands.Commands.color.parameters.includes(...userParam)
+  }
+  
+  if (command === 'cd') {
+    valid = commands.Commands.cd.parameters.includes(...userParam)
+  }
+  
+  return valid
 }

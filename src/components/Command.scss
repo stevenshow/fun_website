@@ -1,0 +1,71 @@
+.help-modal[open] {
+  background-color: var(--terminal-secondary);
+  border: 1px solid white;
+  width: 40%vw;
+}
+
+.help-modal::backdrop {
+  background: rgba(148, 239, 253, 0.301);
+}
+
+.help-container {
+  color: white;
+  column-gap: 2em;
+  display: grid;
+  grid-template-areas:
+    'header header header close'
+    'color color color color'
+    'colors colors colors colors'
+    'page page page page'
+    'pages pages pages pages';
+    
+  h1 {
+    border: 2px dashed white;
+    font-size: 1.1em;
+    margin-top: 0;
+    padding: 10px;
+  }
+
+  h2 {
+    color: var(--terminal-primary);
+    font-size: 1.1em;
+    margin: 0;
+    margin-top: 4px;
+
+    &.color {
+      grid-area: color;
+    }
+
+    &.page {
+      grid-area: page;
+    }
+  }
+
+  .close-modal {
+    grid-area: close;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .colors {
+    grid-area: colors;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  .pages {
+    grid-area: pages;
+    list-style-type: none;
+    margin: 0;
+  }
+}
+
+ul > li {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+ul > li > span {
+  color: rgb(185, 185, 185);
+  justify-self: end;
+}
