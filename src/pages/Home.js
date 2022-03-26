@@ -3,8 +3,6 @@ import rasp from '../img/raspberrypi.png'
 import linux from '../img/linux_logo.png'
 import python from '../img/python_logo.png'
 import uvu from '../img/uvu_logo.png'
-import Modal from 'react-modal'
-import { useState } from 'react'
 
 const cards = [
   {
