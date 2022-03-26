@@ -86,17 +86,33 @@ const Command = () => {
       />
       <dialog className='help-modal'>
         <div className='help-container'>
-        <button onClick={closeModal} className='close-modal'>
-          &times;
-        </button>
-          <h2>This is the Help Modal!</h2>
-          <h3>color &#60;color&#62;</h3>
-          <ul>
-            <li>white</li> 
-            <li>orange</li>
+          <button onClick={closeModal} className='close-modal'>
+            &times;
+          </button>
+          <h1>Welcome to the Help Modal!</h1>
+          <h2 className='color'>color &#60;color&#62;</h2>
+          <ul className='colors'>
             <li>green</li>
+            <li>orange</li>
+            <li>lightblue</li>
+            <li>pink</li>
             <li>purple</li>
-            <li>Pink</li>
+            <li>white</li>
+          </ul>
+          <h2 className='page'>cd &#60;page&#62;</h2>
+          <ul className='pages'>
+              <li>
+                projects<span> - Navigates to projects page</span>
+              </li>
+            <li>
+              contact<span> - Navigates to contact page</span>
+            </li>
+            <li>
+              home<span> - Naviagtes to Home page.</span>
+            </li>
+            <li>
+              .<span> - Navigates to Home page</span>
+            </li>
           </ul>
         </div>
       </dialog>
