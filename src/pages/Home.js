@@ -77,41 +77,6 @@ const cards = [
   },
 ]
 
-Modal.setAppElement('#root');
-function HelpModal() {
-  const [modalIsOpen, setIsOpen] = useState(false)
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
-
-  function openModal() {
-    setIsOpen(true)
-  }
-
-  function closeModal() {
-    setIsOpen(false)
-  }
-
-  return (
-    <Modal
-    ariaHideApp={true}
-      className='help-modal'
-      isOpen={modalIsOpen}
-      // onAfterOpen={afterOpenModal}
-      onRequestClose={closeModal}
-      style={customStyles}
-      contentLabel='Help Modal'
-    />
-  )
-}
-
 const Home = () => {
   return (
     <div className='home'>
