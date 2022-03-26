@@ -1,0 +1,38 @@
+.help-modal[open] {
+  background-color: var(--terminal-secondary);
+  border: 1px solid white;
+  width: 30%vw;
+}
+
+.help-modal::backdrop {
+  background: rgba(148, 239, 253, 0.301);
+}
+
+.help-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    'header header header close'
+    'command command command command'
+    '. main main main';
+  
+  h2 {
+    grid-area: header;
+    border: 2px dashed black;
+  }
+
+  h3 {
+    grid-area: command;
+  }
+
+  .close-modal {
+    grid-area: close;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  ul > li {
+    grid-area: main
+  }
+}
