@@ -120,20 +120,3 @@ button {
     color: red;
   }
 }
-
-.command {
-  background-color: black;
-  border: none;
-  color: var(--terminal-primary);
-  padding-left: 10px;
-  outline: none;
-  width: 55%;
-}
-
-.help-modal {
-  background-color: #448;
-}
-
-.help-modal::backdrop {
-  background: rgba(131, 238, 255, 0.171);
-}
