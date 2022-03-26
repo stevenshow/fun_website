@@ -1,6 +1,14 @@
+import './Command.scss'
 import { useState, useEffect } from 'react'
-import { changeTheme, executeCommand } from '../utils/execution'
+import { executeCommand } from '../utils/execution'
 const commands = require('../utils/commands')
+
+// TODO Possibly use this to check for browser compatibility and fallback
+// if (typeof favDialog.showModal === "function") {
+//   favDialog.showModal();
+// } else {
+//   alert("The <dialog> API is not supported by this browser");
+// }
 
 const Command = () => {
   const [input, setInput] = useState('')
@@ -58,11 +66,11 @@ const Command = () => {
     }
   }
 
-  document.addEventListener('keydown', function(event){
-    if(event.key === "Escape"){
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
       setModalOpen(false)
     }
-  });
+  })
 
   return (
     <span>
@@ -77,8 +85,20 @@ const Command = () => {
         value={input}
       />
       <dialog className='help-modal'>
-        <button onClick={closeModal} className='close-modal'>x</button>
-        Hello
+        <div className='help-container'>
+        <button onClick={closeModal} className='close-modal'>
+          &times;
+        </button>
+          <h2>This is the Help Modal!</h2>
+          <h3>color &#60;color&#62;</h3>
+          <ul>
+            <li>white</li> 
+            <li>orange</li>
+            <li>green</li>
+            <li>purple</li>
+            <li>Pink</li>
+          </ul>
+        </div>
       </dialog>
     </span>
   )

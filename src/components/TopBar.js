@@ -6,11 +6,12 @@ const TopBar = (props) => {
   return (
     <div className='header'>
       <div>
-        <span className='green-highlight'>steven@schoebinger</span>:
-        <span className='blue-highlight'>~/</span>$
-        <span className='green-highlight'> echo </span>Welcome to{' '}
-        <span className='blue-highlight'>$NAME\'s</span> website!
-        <div>Welcome to Steven's website!</div>
+          <span className='green-highlight'>steven@schoebinger</span>:
+          <span className='blue-highlight'>~/</span>$
+          <span className='green-highlight'> echo </span>
+          {/* Welcome to{' '} */}
+          <span className='blue-highlight'>$WELCOME</span>
+        <div>Welcome to Steven's website! Type '<span className='green-highlight'>help</span>' for list of commands.</div>
         <span className='green-highlight'>steven@schoebinger</span>:
         <span className='blue-highlight'>~/</span>
         <span className='directory blue-highlight'></span>$
