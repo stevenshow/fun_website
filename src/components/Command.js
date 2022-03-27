@@ -16,6 +16,7 @@ const Command = () => {
   let valid
   let command
 
+  //.close() breaks on mobile.  Need to figure out how to disable that on mobile
   useEffect(() => {
     let modal = document.querySelector('.help-modal')
     if (modalOpen) {

@@ -13,11 +13,17 @@
   max-height: fit-content;
 }
 
-/* @media only screen and (width < 40em) {
+@media only screen and (width < 40em) {
   .card {
-    width: 100%;
+    width: 100vw;
   }
-} */
+  .help-modal {
+    display: none;
+  }
+  .header {
+    width: 100vw;
+  }
+}
 
 .card:hover .content,
 .card:hover .title {
