@@ -96,10 +96,10 @@ const Command = () => {
               header terminal
             </div>
             <div>
-              Invalid commands will appear <span className='invalid'>red</span>. Once the command is recongnized
+              Invalid commands will appear <span className='invalid'>red</span>. Once the command is recognized
               it will turn the <span className='valid'>color</span> of the chosen theme
             </div>
-            <div>Press the 'esc' key to close the help modal</div>
+            <div>Press the 'esc' key to close the help modal when you are ready to give some commands a try</div>
           </h1>
           <h2 className='color'>color &#60;color&#62;<div>-This will change the primary color theme of the entire website/pages-</div></h2>
           <ul className='colors'>
