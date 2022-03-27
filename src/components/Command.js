@@ -86,11 +86,22 @@ const Command = () => {
       />
       <dialog className='help-modal'>
         <div className='help-container'>
-          <button onClick={closeModal} className='close-modal'>
+          {/* <button onClick={closeModal} className='close-modal'>
             &times;
-          </button>
-          <h1>Welcome to the Help Modal!</h1>
-          <h2 className='color'>color &#60;color&#62;</h2>
+          </button> */}
+          <h1>
+            Welcome to the Help Modal!
+            <div>
+              This modal will show you the commands that can be used in the
+              header terminal
+            </div>
+            <div>
+              Invalid commands will appear <span className='invalid'>red</span>. Once the command is recognized
+              it will turn the <span className='valid'>color</span> of the chosen theme
+            </div>
+            <div>Press the 'esc' key to close the help modal when you are ready to give some commands a try</div>
+          </h1>
+          <h2 className='color'>color &#60;color&#62;<div>-This will change the primary color theme of the entire website/pages-</div></h2>
           <ul className='colors'>
             <li>green</li>
             <li>orange</li>
@@ -99,21 +110,15 @@ const Command = () => {
             <li>purple</li>
             <li>white</li>
           </ul>
-          <h2 className='page'>cd &#60;page&#62;</h2>
+          <h2 className='page'>cd &#60;page&#62;<div>-[c]hange [d]irectory will navigate to the given page-<div>(home and '.' both take you to the homepage)</div></div></h2>
           <ul className='pages'>
-              <li>
-                projects<span> - Navigates to projects page</span>
-              </li>
-            <li>
-              contact<span> - Navigates to contact page</span>
-            </li>
-            <li>
-              home<span> - Naviagtes to Home page.</span>
-            </li>
-            <li>
-              .<span> - Navigates to Home page</span>
-            </li>
+            <li>projects</li>
+            <li>contact</li>
+            <li>home</li>
+            <li>.</li>
           </ul>
+          <h2 className='linkedin'>linkedin</h2>
+          <h2 className='github'>github<div>-This will open a new tab and navigate you to my linkedin/github respectively-</div></h2>
         </div>
       </dialog>
     </span>

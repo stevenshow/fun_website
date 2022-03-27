@@ -1,29 +1,59 @@
 .help-modal[open] {
-  background-color: var(--terminal-secondary);
+  background-color: rgba(35, 59, 197, 0.92);
   border: 1px solid white;
-  width: 40%vw;
 }
 
 .help-modal::backdrop {
-  background: rgba(148, 239, 253, 0.301);
+  background: rgba(148, 239, 253, 0.35);
 }
 
 .help-container {
   color: white;
-  column-gap: 2em;
+  // column-gap: 1.5em;
   display: grid;
   grid-template-areas:
-    'header header header close'
-    'color color color color'
-    'colors colors colors colors'
-    'page page page page'
-    'pages pages pages pages';
+    'header header'
+    'color color'
+    'colors colors'
+    'page page'
+    'pages pages'
+    'linkedin linkedin'
+    'github github';
+
     
-  h1 {
-    border: 2px dashed white;
-    font-size: 1.1em;
-    margin-top: 0;
-    padding: 10px;
+    h1 {
+      border: 2px dashed rgba(255, 255, 255, 0.534);
+      font-size: 1.3em;
+      margin-top: 0;
+      padding: 10px;
+      text-align: center;
+      text-shadow: 2px 2px 4px #2e2d2d;
+      text-transform: uppercase;
+    
+    & div {
+      inline-size: 65vw;
+      overflow-wrap: break-word;
+      padding:10px;
+    }
+
+    & div:nth-child(1) {
+      color: rgb(199, 46, 179);
+    }
+
+    & div:nth-child(2) {
+      color: rgb(127, 175, 37);
+    }
+
+    & div:nth-child(3) {
+    }
+
+    & .invalid {
+      color: red;
+    }
+
+    & .valid {
+      color: var(--terminal-primary);
+    }
   }
 
   h2 {
@@ -31,13 +61,33 @@
     font-size: 1.1em;
     margin: 0;
     margin-top: 4px;
+    text-shadow: 2px 2px 4px #2e2d2d;
 
     &.color {
       grid-area: color;
+      
+      & div {
+        color: gray;
+      }
     }
 
     &.page {
       grid-area: page;
+      
+      & div {
+        color: gray;
+      }
+    }
+
+    &.linkedin {
+      grid-area: linkedin;
+    }
+
+    &.github {
+      grid-area: github;
+      & div {
+        color: gray;
+      }
     }
   }
 
@@ -61,11 +111,5 @@
 }
 
 ul > li {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-ul > li > span {
-  color: rgb(185, 185, 185);
-  justify-self: end;
+  text-shadow: 2px 2px 4px #2e2d2d;
 }
