@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 10fr 1fr;
   border: 1px solid var(--terminal-primary);
   padding-left: 1em;
 
@@ -41,7 +41,7 @@
   background: none;
   border-left: 1px solid var(--terminal-primary);
   color: white;
-  display: none;
+  display: grid;
   text-align: center;
   text-decoration: none;
 }
@@ -53,55 +53,6 @@
 .projects-nav {
   border-bottom: 1px solid var(--terminal-primary);
   border-top: 1px solid var(--terminal-primary);
-}
-
-.dropdown {
-  /* border: 1px solid var(--terminal-primary); */
-  align-items: end;
-  display: grid;
-  position: relative;
-}
-
-.dropbtn {
-  border-top: 1px solid var(--terminal-primary);
-  border-left: 1px solid var(--terminal-primary);
-  border-bottom: 1px solid var(--terminal-primary);
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.dropdown-content {
-  display: none;
-  min-width: fit-content;
-  height: 27.5px;
-  position: absolute;
-
-  & button {
-    border: 1px solid var(--terminal-primary);
-  }
-}
-
-button {
-  &.green-button {
-    color: rgb(23, 199, 23);
-  }
-  &.pink-button {
-    color: rgb(255, 16, 240);
-  }
-
-  &.light-blue-button {
-    color: rgb(131, 238, 255);
-  }
-}
-
-.dropdown-content button:hover {
-  /* color: var(--terminal-secondary); */
-}
-
-.dropdown:hover .dropdown-content {
-  display: flex;
-  right: 4.16em;
-  top: 2.68em;
 }
 
 .currentcommand {

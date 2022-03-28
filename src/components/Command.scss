@@ -12,15 +12,15 @@
   // column-gap: 1.5em;
   display: grid;
   grid-template-areas:
-    'header header'
-    'color color'
-    'colors colors'
-    'page page'
-    'pages pages'
-    'linkedin linkedin'
-    'github github';
+    'header'
+    'color'
+    'colors'
+    'page'
+    'pages'
+    'linkedin'
+    'github';
 
-    
+
     h1 {
       border: 2px dashed rgba(255, 255, 255, 0.534);
       font-size: 1.3em;
@@ -29,9 +29,8 @@
       text-align: center;
       text-shadow: 2px 2px 4px #2e2d2d;
       text-transform: uppercase;
-    
+
     & div {
-      inline-size: 65vw;
       overflow-wrap: break-word;
       padding:10px;
     }
@@ -58,14 +57,16 @@
 
   h2 {
     color: var(--terminal-primary);
-    font-size: 1.1em;
+    color: yellow;
+    font-size: 1em;
     margin: 0;
     margin-top: 4px;
     text-shadow: 2px 2px 4px #2e2d2d;
 
     &.color {
+      font-size: 1.3em;
       grid-area: color;
-      
+
       & div {
         color: gray;
       }
@@ -73,17 +74,20 @@
 
     &.page {
       grid-area: page;
-      
+      font-size: 1.2em;
+
       & div {
         color: gray;
       }
     }
 
     &.linkedin {
+      font-size: 1.2em;
       grid-area: linkedin;
     }
 
     &.github {
+      font-size: 1.2em;
       grid-area: github;
       & div {
         color: gray;

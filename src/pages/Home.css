@@ -15,7 +15,13 @@
 
 @media only screen and (width < 40em) {
   .card {
-    width: 90%;
+    width: 100vw;
+  }
+  .help-modal {
+    display: none;
+  }
+  .header {
+    width: 100vw;
   }
 }
 
