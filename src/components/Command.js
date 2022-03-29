@@ -16,14 +16,20 @@ const Command = () => {
   let valid
   let command
 
-  //.close() breaks on mobile.  Need to figure out how to disable that on mobile
   useEffect(() => {
     let modal = document.querySelector('.help-modal')
-    if (modalOpen) {
-      modal.showModal()
+    // Prevents website from breaking on mobile.  Need to figure out modal for mobile
+    if (typeof modal.showModal === 'function') {
+      if (modalOpen) {
+        modal.showModal()
+      } else {
+        modal.close()
+      }
     } else {
-      modal.close()
+      console.log("Cannot use dialog")
     }
+
+
   }, [modalOpen])
 
   const closeModal = () => {
