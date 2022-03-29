@@ -37,15 +37,19 @@ const TopBar = (props) => {
           Home
         </Link>
         <Link
-        onClick={() => changeDirectory("projects")}
-        id="projects"
-        className="link projects-nav"
-        to="/projects">
+          onClick={() => changeDirectory("projects")}
+          id="projects"
+          className="link projects-nav"
+          to="/projects"
+        >
           Projects
         </Link>
         <Link
-        onClick={() => changeDirectory("contact")}
-        id="contact" className="link" to="/contact">
+          onClick={() => changeDirectory("contact")}
+          id="contact"
+          className="link"
+          to="/contact"
+        >
           Contact
         </Link>
       </div>
