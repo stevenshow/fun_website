@@ -1,12 +1,14 @@
 import "./TopBar.scss";
 import Command from "./Command";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const TopBar = (props) => {
-  const changeDirectory = (pageName) => {
-    let dir = pageName;
-    document.querySelector(".directory").textContent = dir;
-  };
+  const [currentDir, setCurrentDir] = useState("");
+
+  useEffect(() => {
+    document.querySelector(".directory").textContent = currentDir;
+  }, [currentDir]);
 
   return (
     <div className="header">
@@ -29,7 +31,7 @@ const TopBar = (props) => {
       </div>
       <div className="links-right">
         <Link
-          onClick={() => changeDirectory("")}
+          onClick={() => setCurrentDir("")}
           id="home"
           className="link"
           to="/"
@@ -37,7 +39,7 @@ const TopBar = (props) => {
           Home
         </Link>
         <Link
-          onClick={() => changeDirectory("projects")}
+          onClick={() => setCurrentDir("projects")}
           id="projects"
           className="link projects-nav"
           to="/projects"
@@ -45,7 +47,7 @@ const TopBar = (props) => {
           Projects
         </Link>
         <Link
-          onClick={() => changeDirectory("contact")}
+          onClick={() => setCurrentDir("contact")}
           id="contact"
           className="link"
           to="/contact"
