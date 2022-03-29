@@ -17,7 +17,7 @@ const cards = [
     name: "Front End Development",
     alt: "html css js",
     id: 3,
-    content: `I always feared front-end development because I felt that since I was not a graphic desinger, I would not be able to create something that looked good. This all changed when I got my internship doing front-end development. I quickly realized how easily it came to me and how at home I felt doing it. This sparked my interest in making myself a personal website so that I could showcase some of the skills I have learned thus far.`,
+    content: `I always feared front-end development because I felt that since I was not a graphic designer, I would not be able to create something that looked good. This all changed when I got my internship doing front-end development. I quickly realized how easily it came to me and how at home I felt doing it. This sparked my interest in making myself a personal website so that I could showcase some of the skills I have learned thus far.`,
   },
   {
     alt: "python logo",
