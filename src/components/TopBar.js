@@ -14,7 +14,6 @@ const TopBar = (props) => {
         <span className="green-highlight">steven@schoebinger</span>:
         <span className="blue-highlight">~/</span>$
         <span className="green-highlight"> echo </span>
-        {/* Welcome to{' '} */}
         <span className="blue-highlight">$WELCOME</span>
         <div>
           Welcome to Steven's website! Type '
