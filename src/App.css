@@ -2,7 +2,7 @@
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 2px;
 }
 
@@ -19,7 +19,7 @@
 ::-webkit-scrollbar-thumb:hover {
   /* background: var(--terminal-primary); */
   background: black;
-}
+} */
 
 /* Allows for the background to be blurred but not the children */
 .App::before {

@@ -1,16 +1,19 @@
 .cardHolder {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 2%;
-  gap: 3% 2%;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  /* gap: 3% 2%; */
+  /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
 }
 
 .card {
   border-radius: 5px;
   border: 1px solid var(--terminal-primary);
-  transition: 0.3s;
-  width: 100%;
   max-height: fit-content;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  width: 48%;
 }
 
 @media only screen and (width < 40em) {
@@ -25,8 +28,7 @@
   }
 }
 
-.card:hover .content,
-.card:hover .title {
+.card:hover * {
   color: white;
   transition: color 0.3s;
 }
