@@ -29,7 +29,7 @@ const cards = [
     name: "UVU",
     alt: "utah valley university logo",
     id: 5,
-    content: `I came to UVU because it was close to home and because they had the degree I was pursuing at the time. But after attending, I realized how much of a perfect fit this college is for me. I love being able to have a professor that is fresh out of the industry and is able to give advice to students that are just getting into it. This to me is invaluable. The other students feel more like partners rather than someone you are competing against. Overall I have everything here that I felt I needed to excel in my degree and prepare for the industry.`,
+    content: `I came to UVU because it was close to home and they had the degree I was pursuing at the time. But after attending, I realized how much of a perfect fit this college is for me. I love being able to have a professor that is fresh out of the industry and is able to give advice to students that are just getting into it. This to me is invaluable. The other students feel more like partners rather than someone you are competing against. Overall I have everything here that I felt I needed to excel in my degree and prepare for the industry.`,
   },
   // {
   //   name: "Agile Methodology",
