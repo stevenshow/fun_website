@@ -43,12 +43,12 @@
 
 :root .blue {
   --terminal-primary: var(--terminal-blue);
-  --terminal-secondary: var(--terminal-white);
+  --terminal-secondary: var(--terminal-blue);
 }
 
 :root .red {
   --terminal-primary: var(--terminal-red);
-  --terminal-secondary: var(--terminal-white);
+  --terminal-secondary: var(--terminal-blue);
 }
 
 body {
