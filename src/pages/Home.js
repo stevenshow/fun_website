@@ -5,13 +5,13 @@ const cards = [
     name: "Linux",
     alt: "linux logo",
     id: 1,
-    content: `I began using Linux back in 2018 when a professor mentioned how beneficial it would be for a programmer to be familiar with it. Being the "All-in" type, I deleted my Windows partition and installed Linux Mint. This forced me to learn the operating system as I was mid-semester. I learned it fast and ended up falling in love. I did what every Linux user does at some point in their journey and "Distro-hopped" to a few popular distros. This landed me at the distro I have been using for roughly 2 years now, Manjaro, an Arch-based distro.`,
+    content: `I began using Linux back in 2018 when a professor mentioned how beneficial it would be for a programmer to be familiar with. Being the "all-in" type, I deleted my Windows partition and installed Linux Mint. This forced me to learn the operating system as I was mid-semester. I learned it fast and ended up falling in love. I did what every Linux user does at some point in their journey and "Distro-hopped" to a few popular distros. This landed me at the distro I have been using for roughly 2 years now, Manjaro, an Arch-based distro. This has made me feel at home in the command line.`,
   },
   {
     name: "Raspberry Pi",
     alt: "raspberry pi",
     id: 2,
-    content: `My Raspberry Pi is a device that I feel has helped foster my imagination and love for tech. I love the ability that I have to deploy an automated script that can collect data for me, send emails/texts, or just turn on LEDs based on the local weather. This gives me the ability to take whatever idea I have and create a project that can affect my surroundings in a real sense.`,
+    content: `My Raspberry Pi is a device that has helped foster my imagination and love for tech. I love the ability that I have to deploy an automated script that can collect data for me, send emails/texts, or just turn on LEDs based on the local weather. This gives me the ability to take whatever idea I have and create a project that can affect my surroundings in a real sense.`,
   },
   {
     name: "Front End Development",
