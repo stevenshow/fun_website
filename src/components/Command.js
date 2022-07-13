@@ -1,5 +1,6 @@
 import "./Command.scss";
 import { useState, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 import { changeTheme, executeCommand } from "../utils/execution";
 const commands = require("../utils/commands");
 
@@ -97,11 +98,8 @@ const Command = () => {
       />
       <dialog className="help-modal">
         <div className="help-container">
-          {/* <button onClick={closeModal} className="close-modal">
-            &times;
-          </button> */}
           <h1>
-            Welcome to the Help Modal!
+            Welcome to the Help Modal!{" "}
             <div>
               This modal will show you the commands that can be used in the
               header terminal
@@ -111,9 +109,21 @@ const Command = () => {
               Once the command is recognized it will turn the{" "}
               <span className="valid">color</span> of the chosen theme
             </div>
-            <div>
-              Press the 'esc' key to close the help modal when you are ready to
-              give some commands a try
+            <div className="close-message">
+              Press{" "}
+              {isMobile ? (
+                <>
+                  -&gt;
+                  <button className="close-modal" onClick={closeModal}>
+                    HERE
+                  </button>
+                  &lt;-
+                </>
+              ) : (
+                "the 'esc' key"
+              )}{" "}
+              to close the help modal when you are ready to give some commands a
+              try
             </div>
           </h1>
           <h2 className="color">
