@@ -3,7 +3,7 @@ import { validateCommand } from "./checkers";
 export const changeTheme = (setColor, color) => {
   let element = document.getElementById("root");
   element.classList.remove(...element.classList);
-  document.getElementById("root").classList.toggle(color);
+  element.classList.toggle(color);
   setColor(color);
 };
 
