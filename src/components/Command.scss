@@ -1,4 +1,5 @@
 .help-modal[open] {
+  animation: zoomIn .75s;
   background-color: rgba(35, 59, 197, 0.92);
   border: 1px solid white;
 }
