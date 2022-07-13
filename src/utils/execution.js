@@ -1,19 +1,24 @@
-import { validateCommand } from "../utils/checkers";
+import { validateCommand } from "./checkers";
 
-export const changeTheme = (color) => {
+export const changeTheme = (setColor, color) => {
   let element = document.getElementById("root");
   element.classList.remove(...element.classList);
   document.getElementById("root").classList.toggle(color);
+  setColor(color);
 };
 
-export const executeCommand = (userCommand, ...userParams) => {
+export const executeCommand = (
+  setColor = () => {},
+  userCommand,
+  ...userParams
+) => {
   console.log(...userParams);
   console.log("command:", userCommand);
   console.log("parameters:", userParams);
   switch (userCommand) {
     case "color":
       if (validateCommand(userCommand, userParams)) {
-        changeTheme(...userParams);
+        changeTheme(setColor, ...userParams);
       }
       break;
     case "cd":
