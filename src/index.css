@@ -8,6 +8,7 @@
   --terminal-purple: rgb(176, 38, 255);
   --terminal-white: white;
   --terminal-orange: rgb(255, 115, 34);
+  --terminal-red: rgb(255, 34, 34);
 }
 
 :root .green {
@@ -38,6 +39,16 @@
 :root .purple {
   --terminal-primary: var(--terminal-purple);
   --termina-secondary: var(--terminal-blue);
+}
+
+:root .blue {
+  --terminal-primary: var(--terminal-blue);
+  --terminal-secondary: var(--terminal-white);
+}
+
+:root .red {
+  --terminal-primary: var(--terminal-red);
+  --terminal-secondary: var(--terminal-white);
 }
 
 body {
