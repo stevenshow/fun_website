@@ -44,6 +44,10 @@
 
 :root .yellow {
   --terminal-primary: var(--terminal-yellow);
+}
+ 
+:root .blue {
+  --terminal-primary: var(--terminal-blue);
   --terminal-secondary: var(--terminal-blue);
 }
 
