@@ -1,5 +1,5 @@
 // import 'bootstrap/dist/css/bootstrap.css';
-import "./App.css";
+import "./App.scss";
 import Home from "./pages/Home.js";
 import TopBar from "./components/TopBar";
 import Projects from "./pages/Projects";
