@@ -12,9 +12,6 @@ export const executeCommand = (
   userCommand,
   ...userParams
 ) => {
-  console.log(...userParams);
-  console.log("command:", userCommand);
-  console.log("parameters:", userParams);
   switch (userCommand) {
     case "color":
       if (validateCommand(userCommand, userParams)) {
