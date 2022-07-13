@@ -16,7 +16,7 @@
   width: 48%;
 }
 
-@media only screen and (width < 40em) {
+@media screen and (max-width: 768px) {
   .card {
     width: 100vw;
   }
@@ -24,7 +24,7 @@
     display: none;
   }
   .header {
-    width: 100vw;
+    width: fit-content;
   }
 }
 
