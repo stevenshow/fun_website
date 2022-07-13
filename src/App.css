@@ -8,7 +8,7 @@
 
 ::-webkit-scrollbar-track {
   background: black;
-}
+} */
 
 /* Need to figure out how to override this or let the var update the scrollbar color*/
 ::-webkit-scrollbar-thumb {
@@ -19,7 +19,7 @@
 ::-webkit-scrollbar-thumb:hover {
   /* background: var(--terminal-primary); */
   background: black;
-} */
+}
 
 /* Allows for the background to be blurred but not the children */
 .App::before {
