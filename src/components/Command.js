@@ -1,6 +1,6 @@
 import "./Command.scss";
 import { useState, useEffect } from "react";
-import { executeCommand } from "../utils/execution";
+import { changeTheme, executeCommand } from "../utils/execution";
 const commands = require("../utils/commands");
 
 // TODO Possibly use this to check for browser compatibility and fallback
@@ -13,8 +13,17 @@ const commands = require("../utils/commands");
 const Command = () => {
   const [input, setInput] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
+  const [color, setColor] = useState(
+    () => localStorage.getItem("color") ?? "green"
+  );
   let valid;
   let command;
+
+  useEffect(() => {
+    setColor(setColor, color);
+    changeTheme(setColor, color);
+    localStorage.setItem("color", color);
+  }, [color]);
 
   useEffect(() => {
     let modal = document.querySelector(".help-modal");
@@ -49,14 +58,11 @@ const Command = () => {
       }
       // execute command
       let parameters = input.split(" ").slice(1);
-      executeCommand(command[0], ...parameters);
+      executeCommand(setColor, command[0], ...parameters);
       clearInput();
     } else {
-      // give error message
-      console.log(valid);
       setInput(`try typing 'help'`);
-      // clear input
-      setTimeout(clearInput, 1000);
+      setTimeout(clearInput, 750);
     }
   };
 
@@ -71,7 +77,7 @@ const Command = () => {
     }
   };
 
-  document.addEventListener("keydown", function (event) {
+  document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       setModalOpen(false);
     }
@@ -118,11 +124,14 @@ const Command = () => {
             </div>
           </h2>
           <ul className="colors">
+            <li>blue</li>
             <li>green</li>
-            <li>orange</li>
             <li>lightblue</li>
+            <li>orange</li>
             <li>pink</li>
             <li>purple</li>
+            <li>red</li>
+            <li>yellow</li>
             <li>white</li>
           </ul>
           <h2 className="page">
