@@ -23,12 +23,14 @@ const TopBar = (props) => {
           <span className="green-highlight">help</span>' for list of commands.
         </div>
         <span className="green-highlight">steven@schoebinger</span>:
-        <span className="blue-highlight">~/</span>
-        <span className="directory blue-highlight"></span>$
-        {/* <br></br>
+        <span className="path">
+          <span className="blue-highlight">~/</span>
+          <span className="directory blue-highlight"></span>$
+          {/* <br></br>
         <span className='test'>test</span> */}
-        {/* <Prompt prevCommand="color orange" classes="command valid"/> */}
-        <Command />
+          {/* <Prompt prevCommand="color orange" classes="command valid"/> */}
+          <Command />
+        </span>
       </div>
       <div className="links-right">
         <Link

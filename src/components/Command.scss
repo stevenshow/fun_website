@@ -2,6 +2,15 @@
   animation: zoomIn .75s;
   background-color: rgba(35, 59, 197, 0.92);
   border: 1px solid white;
+  @media screen and (max-width: 500px) {
+    .close-modal {
+      background: none;
+      border: none;
+      color: red;
+      font-weight: bold;
+      outline: none;
+    }
+  }
 }
 
 .help-modal::backdrop {
@@ -95,12 +104,6 @@
         color: gray;
       }
     }
-  }
-
-  .close-modal {
-    grid-area: close;
-    height: fit-content;
-    width: fit-content;
   }
 
   .colors {
