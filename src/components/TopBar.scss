@@ -24,17 +24,6 @@
   }
 }
 
-.cursor {
-  animation: cursor-blink 1s step-start infinite;
-  margin: 2px;
-}
-
-@keyframes cursor-blink {
-  50% {
-    opacity: 0;
-  }
-}
-
 .links-right,
 .link {
   background: none;
@@ -61,6 +50,7 @@
   padding-left: 10px;
   outline: none;
   width: 55%;
+  margin-bottom: 5px;
 
   &.valid {
     color: var(--terminal-primary);
