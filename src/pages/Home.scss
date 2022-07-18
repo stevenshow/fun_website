@@ -18,9 +18,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .card {
-    width: 100vw;
-  }
+  .card,
   .header {
     width: fit-content;
   }
@@ -59,5 +57,5 @@
 
 .title::before {
   content: "> ";
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
