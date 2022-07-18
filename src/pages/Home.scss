@@ -15,6 +15,10 @@
   max-height: fit-content;
   min-height: 35vh;
   width: 48%;
+  &:hover * {
+    color: white;
+    transition: color linear 0.6s;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -22,11 +26,6 @@
   .header {
     width: fit-content;
   }
-}
-
-.card:hover * {
-  color: white;
-  transition: color linear 0.6s;
 }
 
 .content {
@@ -53,9 +52,8 @@
   font-weight: 600;
   margin-top: 15px;
   transition: color linear 0.6s;
-}
-
-.title::before {
-  content: "> ";
-  padding-left: 0.5rem;
+  &:before {
+    content: "> ";
+    padding-left: 0.5rem;
+  }
 }
