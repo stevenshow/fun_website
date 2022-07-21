@@ -13,7 +13,7 @@ const Projects = () => {
     };
     getData();
   }, [api]);
-  
+
   return (
     <div className="projects">
       <div className="project-holder">
