@@ -8,7 +8,7 @@ const Projects = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await api.get("projects");
+      const res = await api.get("/cards/projects");
       setProjects(res.data);
     };
     getData();
