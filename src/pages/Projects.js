@@ -1,31 +1,19 @@
+import { useEffect, useState } from "react";
+import { useAPI } from "../utils/useAPI";
 import "./Projects.scss";
 
-const projects = [
-  {
-    name: "Cat Fact Generator",
-    language: "Python",
-    description:
-      "This project was one that I started because my wife loves anything and everything about cats. I decided to create a program that would run on my Raspberry Pi that would gather a cat photo and a cat fact from two APIs each morning, attach them both to an email and send them to my wife each morning.",
-    takeaway: "Consume an API, Cron scheduling",
-  },
-  {
-    name: "Local Weather Data Gatherer",
-    language: "Python",
-    description:
-      "I had recently learned about data collection in a python course I was taking, and decided I would gather my own. I created a program that runs everyday, on the hour, and collects weather data from a local weather station's API. I then store that in a CSV file for consumption.",
-    takeaway: "File Output",
-  },
-  {
-    name: "Recipe Database",
-    language: "mySQL",
-    description:
-      "I created a database to store recipes that my wife could then utilize to easily locate what she wanted. I focused on allowing it to be searchable by food type, cook time, ingredients needed, etc.",
-    takeaway: "Properly set up database, Query database",
-  },
-];
-
-// TODO remove image and focus on the content of what I did, what I learned, and what I struggled with.
 const Projects = () => {
+  const api = useAPI();
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await api.get("projects");
+      setProjects(res.data);
+    };
+    getData();
+  }, [api]);
+  
   return (
     <div className="projects">
       <div className="project-holder">
