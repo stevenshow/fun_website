@@ -2,7 +2,6 @@
   "Valid": [
     "color",
     "cd",
-    "echo",
     "linkedin",
     "github",
     "help"
@@ -28,18 +27,6 @@
         "home",
         "projects",
         "contact"
-      ]
-    },
-    "ls": {
-      "execute": "list",
-      "parameters": [
-        "ls"
-      ]
-    },
-    "linkedin": {
-      "execute": "redirect",
-      "parameters": [
-        "linkedin"
       ]
     }
   }
