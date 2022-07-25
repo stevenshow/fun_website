@@ -45,7 +45,7 @@
 
 /* Allows for the background to be blurred but not the children */
 .App::before {
-  content: '';
+  content: "";
   left: 0;
   top: 0;
   width: 100%;
