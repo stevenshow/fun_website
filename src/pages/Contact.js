@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useAPI } from "../utils/useAPI";
-import "./Contact.scss";
+import { useEffect, useState } from 'react';
+import { useAPI } from '../utils/useAPI';
+import './Contact.scss';
 
 const Contact = () => {
   const api = useAPI();
@@ -8,7 +8,7 @@ const Contact = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await api.get("/cards/contact");
+      const res = await api.get('/cards/contact');
       setCards(res.data);
     };
     getData();
@@ -21,10 +21,7 @@ const Contact = () => {
         <div className="content">
           {cards.map((card, i) => (
             <>
-              <button
-                className="ascii-button"
-                onClick={() => window.open(`${card.link}`)}
-              >
+              <button className="ascii-button" onClick={() => window.open(`${card.link}`)}>
                 <pre>
                   <code>{card.ascii}</code>
                 </pre>

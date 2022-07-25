@@ -1,41 +1,37 @@
-import { validateCommand } from "./checkers";
+import { validateCommand } from './checkers';
 
 export const changeTheme = (setColor, color) => {
-  let element = document.getElementById("root");
+  let element = document.getElementById('root');
   element.classList.remove(...element.classList);
   element.classList.toggle(color);
   setColor(color);
 };
 
-export const executeCommand = (
-  setColor = () => {},
-  userCommand,
-  ...userParams
-) => {
+export const executeCommand = (setColor = () => {}, userCommand, ...userParams) => {
   switch (userCommand) {
-    case "color":
+    case 'color':
       if (validateCommand(userCommand, userParams)) {
         changeTheme(setColor, ...userParams);
       }
       break;
-    case "cd":
-      if (userParams[0] === ".") userParams[0] = "home";
+    case 'cd':
+      if (userParams[0] === '.') userParams[0] = 'home';
       if (validateCommand(userCommand, userParams)) {
         let nav = document.getElementById(...userParams);
-        let dir = userParams[0] === "home" ? "" : `${userParams}`;
-        document.querySelector(".directory").textContent = dir;
+        let dir = userParams[0] === 'home' ? '' : `${userParams}`;
+        document.querySelector('.directory').textContent = dir;
         nav.click();
       }
       break;
-    case "list":
+    case 'list':
       if (true) {
         document.getElementsByClassName();
       }
       break;
-    case "linkedin":
+    case 'linkedin':
       window.open(`https://www.linkedin.com/in/steven-schoebinger/`);
       break;
-    case "github":
+    case 'github':
       window.open(`https://www.github.com/stevenshow/`);
       break;
     default:

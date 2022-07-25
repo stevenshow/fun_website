@@ -5,8 +5,8 @@
   padding-left: 1em;
 
   & * {
-    font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New;
     font-size: 1.2rem;
   }
 
@@ -15,11 +15,11 @@
     margin: 0;
   }
 
-  & .green-highlight {
+  & .primary-highlight {
     color: var(--terminal-primary);
   }
 
-  & .blue-highlight {
+  & .secondary-highlight {
     color: var(--terminal-secondary);
   }
 }
@@ -43,7 +43,7 @@
   border-top: 1px solid var(--terminal-primary);
 }
 
-.currentcommand {
+.command-input {
   background-color: black;
   border: none;
   color: white;

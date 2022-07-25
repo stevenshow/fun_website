@@ -3,8 +3,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2%;
-  /* gap: 3% 2%; */
-  /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
 }
 
 .card {
@@ -39,7 +37,6 @@
 }
 
 .home {
-  /* background-image: url("../img/linking_lines.png"); */
   background-color: black;
   background-attachment: fixed;
 }
@@ -53,7 +50,7 @@
   margin-top: 15px;
   transition: color linear 0.6s;
   &:before {
-    content: "> ";
+    content: '> ';
     padding-left: 0.5rem;
   }
 }

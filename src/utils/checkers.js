@@ -1,13 +1,13 @@
-const commands = require("./commands");
+const commands = require('./commands');
 
 export const validateCommand = (command, userParam) => {
   let valid = false;
 
-  if (command === "color") {
+  if (command === 'color') {
     valid = commands.Commands.color.parameters.includes(...userParam);
   }
 
-  if (command === "cd") {
+  if (command === 'cd') {
     valid = commands.Commands.cd.parameters.includes(...userParam);
   }
 

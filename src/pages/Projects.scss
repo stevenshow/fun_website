@@ -3,8 +3,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2%;
-  /* gap: 3% 2%; */
-  /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
 }
 
 .project {
@@ -31,7 +29,7 @@
   margin-top: 15px;
   transition: color linear 0.6s;
   &:before {
-    content: "> ";
+    content: '> ';
     padding-left: 0.5rem;
   }
 }
@@ -70,6 +68,6 @@ li > div {
 div + li {
   padding-left: 20px;
   &:before {
-    content: "- ";
+    content: '- ';
   }
 }

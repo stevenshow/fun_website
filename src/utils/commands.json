@@ -1,12 +1,5 @@
 {
-  "Valid": [
-    "color",
-    "cd",
-    "echo",
-    "linkedin",
-    "github",
-    "help"
-  ],
+  "Valid": ["color", "cd", "linkedin", "github", "help"],
   "Commands": {
     "color": {
       "execute": "theme",
@@ -24,23 +17,7 @@
     },
     "cd": {
       "execute": "changeDirectory",
-      "parameters": [
-        "home",
-        "projects",
-        "contact"
-      ]
-    },
-    "ls": {
-      "execute": "list",
-      "parameters": [
-        "ls"
-      ]
-    },
-    "linkedin": {
-      "execute": "redirect",
-      "parameters": [
-        "linkedin"
-      ]
+      "parameters": ["home", "projects", "contact"]
     }
   }
 }
