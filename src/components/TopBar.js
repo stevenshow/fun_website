@@ -1,29 +1,31 @@
 import './TopBar.scss';
 import Command from './Command';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const TopBar = (props) => {
   const [currentDir, setCurrentDir] = useState('');
+  const directory = useRef(null);
 
   useEffect(() => {
-    document.querySelector('.directory').textContent = currentDir;
+    directory.current.textContent = currentDir;
   }, [currentDir]);
 
   return (
     <div className="header">
       <div>
-        <span className="green-highlight">steven@schoebinger</span>:
-        <span className="blue-highlight">~/</span>$<span className="green-highlight"> echo </span>
-        <span className="blue-highlight">$WELCOME</span>
+        <span className="primary-highlight">steven@schoebinger</span>:
+        <span className="secondary-highlight">~/</span>$
+        <span className="primary-highlight"> echo </span>
+        <span className="secondary-highlight">$WELCOME</span>
         <div>
-          Welcome to Steven's website! Type '<span className="green-highlight">help</span>' for list
-          of commands.
+          Welcome to Steven's website! Type '<span className="primary-highlight">help</span>' for
+          list of commands.
         </div>
-        <span className="green-highlight">steven@schoebinger</span>:
+        <span className="primary-highlight">steven@schoebinger</span>:
         <span className="path">
-          <span className="blue-highlight">~/</span>
-          <span className="directory blue-highlight"></span>$
+          <span className="secondary-highlight">~/</span>
+          <span className="secondary-highlight" ref={directory}></span>$
           <Command />
         </span>
       </div>

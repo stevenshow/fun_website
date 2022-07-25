@@ -1,5 +1,5 @@
 import './Command.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { isMobile } from 'react-device-detect';
 import { changeTheme, executeCommand } from '../utils/execution';
 const commands = require('../utils/commands');
@@ -8,6 +8,8 @@ const Command = () => {
   const [input, setInput] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
   const [color, setColor] = useState(() => localStorage.getItem('color') ?? 'green');
+  const help = useRef(null);
+  const currentCommand = useRef(document.getElementById('current-command'));
   let valid;
   let command;
 
@@ -18,7 +20,7 @@ const Command = () => {
   }, [color]);
 
   useEffect(() => {
-    let modal = document.querySelector('.help-modal');
+    let modal = help.current;
     // Prevents website from breaking on mobile.  Need to figure out modal for mobile
     if (typeof modal.showModal === 'function') {
       if (modalOpen) {
@@ -37,11 +39,10 @@ const Command = () => {
 
   const clearInput = () => {
     setInput('');
-    document.querySelector('.currentcommand').classList.remove('invalid');
+    currentCommand.current.classList.remove('invalid');
   };
 
-  const handle = () => {
-    // Going to probably need regex to test for valid command and arg
+  const handleCommand = () => {
     if (valid) {
       if (command[0] === 'help') {
         setModalOpen(true);
@@ -62,10 +63,10 @@ const Command = () => {
     command = input.split(' ');
     valid = commands['Valid'].includes(command[0]) || command[0] === '';
     if (valid) {
-      document.querySelector('.currentcommand').classList.add('valid');
-      document.querySelector('.currentcommand').classList.remove('invalid');
+      currentCommand.current.classList.add('valid');
+      currentCommand.current.classList.remove('invalid');
     } else {
-      document.querySelector('.currentcommand').classList.add('invalid');
+      currentCommand.current.classList.add('invalid');
     }
   };
 
@@ -79,15 +80,16 @@ const Command = () => {
     <span>
       <input
         autoFocus
-        className={`currentcommand valid`}
+        className="command-input valid"
         onInput={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => e.key === 'Enter' && handle()}
+        onKeyDown={(e) => e.key === 'Enter' && handleCommand()}
         onKeyUp={() => checkCommand()}
+        ref={currentCommand}
         spellCheck="false"
         type="text"
         value={input}
       />
-      <dialog className="help-modal">
+      <dialog className="help-modal" ref={help}>
         <div className="help-container">
           <h1>
             Welcome to the Help Modal!{' '}
