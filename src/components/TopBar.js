@@ -15,7 +15,6 @@ const TopBar = (props) => {
       <div>
         <span className="green-highlight">steven@schoebinger</span>:
         <span className="blue-highlight">~/</span>$<span className="green-highlight"> echo </span>
-        {/* Welcome to{' '} */}
         <span className="blue-highlight">$WELCOME</span>
         <div>
           Welcome to Steven's website! Type '<span className="green-highlight">help</span>' for list
@@ -25,9 +24,6 @@ const TopBar = (props) => {
         <span className="path">
           <span className="blue-highlight">~/</span>
           <span className="directory blue-highlight"></span>$
-          {/* <br></br>
-        <span className='test'>test</span> */}
-          {/* <Prompt prevCommand="color orange" classes="command valid"/> */}
           <Command />
         </span>
       </div>
