@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useAPI } from "../utils/useAPI";
-import "./Home.scss";
+import { useEffect, useState } from 'react';
+import { useAPI } from '../utils/useAPI';
+import './Home.scss';
 
 const Home = () => {
   const api = useAPI();
@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await api.get("cards");
+      const res = await api.get('cards');
       setCards(res.data);
     };
     getData();

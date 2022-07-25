@@ -1,35 +1,33 @@
-import "./Command.scss";
-import { useState, useEffect } from "react";
-import { isMobile } from "react-device-detect";
-import { changeTheme, executeCommand } from "../utils/execution";
-const commands = require("../utils/commands");
+import './Command.scss';
+import { useState, useEffect } from 'react';
+import { isMobile } from 'react-device-detect';
+import { changeTheme, executeCommand } from '../utils/execution';
+const commands = require('../utils/commands');
 
 const Command = () => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
-  const [color, setColor] = useState(
-    () => localStorage.getItem("color") ?? "green"
-  );
+  const [color, setColor] = useState(() => localStorage.getItem('color') ?? 'green');
   let valid;
   let command;
 
   useEffect(() => {
     setColor(setColor, color);
     changeTheme(setColor, color);
-    localStorage.setItem("color", color);
+    localStorage.setItem('color', color);
   }, [color]);
 
   useEffect(() => {
-    let modal = document.querySelector(".help-modal");
+    let modal = document.querySelector('.help-modal');
     // Prevents website from breaking on mobile.  Need to figure out modal for mobile
-    if (typeof modal.showModal === "function") {
+    if (typeof modal.showModal === 'function') {
       if (modalOpen) {
         modal.showModal();
       } else {
         modal.close();
       }
     } else {
-      console.log("Cannot use dialog");
+      console.log('Cannot use dialog');
     }
   }, [modalOpen]);
 
@@ -38,20 +36,20 @@ const Command = () => {
   };
 
   const clearInput = () => {
-    setInput("");
-    document.querySelector(".currentcommand").classList.remove("invalid");
+    setInput('');
+    document.querySelector('.currentcommand').classList.remove('invalid');
   };
 
   const handle = () => {
     // Going to probably need regex to test for valid command and arg
     if (valid) {
-      if (command[0] === "help") {
+      if (command[0] === 'help') {
         setModalOpen(true);
         clearInput();
         return;
       }
       // execute command
-      let parameters = input.split(" ").slice(1);
+      let parameters = input.split(' ').slice(1);
       executeCommand(setColor, command[0], ...parameters);
       clearInput();
     } else {
@@ -61,18 +59,18 @@ const Command = () => {
   };
 
   const checkCommand = () => {
-    command = input.split(" ");
-    valid = commands["Valid"].includes(command[0]) || command[0] === "";
+    command = input.split(' ');
+    valid = commands['Valid'].includes(command[0]) || command[0] === '';
     if (valid) {
-      document.querySelector(".currentcommand").classList.add("valid");
-      document.querySelector(".currentcommand").classList.remove("invalid");
+      document.querySelector('.currentcommand').classList.add('valid');
+      document.querySelector('.currentcommand').classList.remove('invalid');
     } else {
-      document.querySelector(".currentcommand").classList.add("invalid");
+      document.querySelector('.currentcommand').classList.add('invalid');
     }
   };
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
       setModalOpen(false);
     }
   });
@@ -83,7 +81,7 @@ const Command = () => {
         autoFocus
         className={`currentcommand valid`}
         onInput={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && handle()}
+        onKeyDown={(e) => e.key === 'Enter' && handle()}
         onKeyUp={() => checkCommand()}
         spellCheck="false"
         type="text"
@@ -92,18 +90,14 @@ const Command = () => {
       <dialog className="help-modal">
         <div className="help-container">
           <h1>
-            Welcome to the Help Modal!{" "}
+            Welcome to the Help Modal!{' '}
+            <div>This modal will show you the commands that can be used in the header terminal</div>
             <div>
-              This modal will show you the commands that can be used in the
-              header terminal
-            </div>
-            <div>
-              Invalid commands will appear <span className="invalid">red</span>.
-              Once the command is recognized it will turn the{" "}
-              <span className="valid">color</span> of the chosen theme
+              Invalid commands will appear <span className="invalid">red</span>. Once the command is
+              recognized it will turn the <span className="valid">color</span> of the chosen theme
             </div>
             <div className="close-message">
-              Press{" "}
+              Press{' '}
               {isMobile ? (
                 <>
                   -&gt;
@@ -114,17 +108,13 @@ const Command = () => {
                 </>
               ) : (
                 "the 'esc' key"
-              )}{" "}
-              to close the help modal when you are ready to give some commands a
-              try
+              )}{' '}
+              to close the help modal when you are ready to give some commands a try
             </div>
           </h1>
           <h2 className="color">
             color &#60;color&#62;
-            <div>
-              -This will change the primary color theme of the entire
-              website/pages-
-            </div>
+            <div>-This will change the primary color theme of the entire website/pages-</div>
           </h2>
           <ul className="colors">
             <li>blue</li>
@@ -154,8 +144,7 @@ const Command = () => {
           <h2 className="github">
             github
             <div>
-              -This will open a new tab and navigate you to my linkedin/github
-              respectively-
+              -This will open a new tab and navigate you to my linkedin/github respectively-
             </div>
           </h2>
         </div>

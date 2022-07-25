@@ -1,14 +1,14 @@
-import "./Modal.scss";
+import './Modal.scss';
 
 const Modal = (props) => {
-  let modal = document.getElementById("help-modal");
+  let modal = document.getElementById('help-modal');
   const closeModal = () => {
-    modal.style.display = "none";
+    modal.style.display = 'none';
   };
 
   window.onclick = function (event) {
     if (event.target === modal) {
-      modal.style.display = "none";
+      modal.style.display = 'none';
     }
   };
   return (

@@ -23,13 +23,13 @@
   width: 80vw;
   display: grid;
   grid-template-areas:
-    "header"
-    "color"
-    "colors"
-    "page"
-    "pages"
-    "linkedin"
-    "github";
+    'header'
+    'color'
+    'colors'
+    'page'
+    'pages'
+    'linkedin'
+    'github';
 
   h1 {
     border: 2px dashed rgba(255, 255, 255, 0.534);
