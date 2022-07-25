@@ -24,14 +24,6 @@
   font-family: 'Lucida Console', 'Courier New', monospace;
 }
 
-/* ::-webkit-scrollbar {
-  width: 2px;
-}
-
-::-webkit-scrollbar-track {
-  background: black;
-} */
-
 /* Need to figure out how to override this or let the var update the scrollbar color*/
 ::-webkit-scrollbar-thumb {
   /* background: var(--terminal-primary); */
