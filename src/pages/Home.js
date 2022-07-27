@@ -15,16 +15,14 @@ const Home = () => {
         setCards(res.data);
       } catch (e) {
         setError({ code: e.code, message: e.message });
-        console.log(e);
       }
     };
     getData();
   }, [api]);
-  console.log(error);
 
   return (
     <>
-      {cards.length > 0 && !error && (
+      {cards.length > 0 ? (
         <div className="home">
           <div className="cardHolder">
             {cards.map((card, i) => (
@@ -37,8 +35,9 @@ const Home = () => {
             ))}
           </div>
         </div>
+      ) : (
+        <Error errorMessage={error}></Error>
       )}
-      <Error errorMessage={error}></Error>
     </>
   );
 };

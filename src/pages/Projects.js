@@ -6,7 +6,7 @@ import './Projects.scss';
 const Projects = () => {
   const api = useAPI();
   const [projects, setProjects] = useState([]);
-  const [error, setError] = useState(undefined);
+  const [error, setError] = useState({ code: undefined, message: undefined });
 
   useEffect(() => {
     const getData = async () => {
@@ -14,7 +14,7 @@ const Projects = () => {
         const res = await api.get('/cards/projects');
         setProjects(res.data);
       } catch (e) {
-        setError(e.message);
+        setError({ code: e.code, message: e.message });
       }
     };
     getData();
@@ -22,7 +22,7 @@ const Projects = () => {
 
   return (
     <>
-      {projects.length > 0 && !error && (
+      {projects.length > 0 ? (
         <div className="projects">
           <div className="project-holder">
             {projects.map((project, i) => (
@@ -46,8 +46,9 @@ const Projects = () => {
             ))}
           </div>
         </div>
+      ) : (
+        <Error errorMessage={error} />
       )}
-      <Error errorMessage={error} />
     </>
   );
 };
