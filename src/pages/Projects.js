@@ -47,8 +47,9 @@ const Projects = () => {
           </div>
         </div>
       ) : (
-        <Error errorMessage={error} />
+        <></>
       )}
+      {error['code'] != null && <Error errorMessage={error} />}
     </>
   );
 };

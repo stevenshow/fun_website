@@ -36,8 +36,9 @@ const Home = () => {
           </div>
         </div>
       ) : (
-        <Error errorMessage={error}></Error>
+        <></>
       )}
+      {error['code'] != null && <Error errorMessage={error}></Error>}
     </>
   );
 };
