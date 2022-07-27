@@ -1,0 +1,9 @@
+{
+    "ERR_NETWORK": {
+    "Causes": ["Server is down", "Database is down"],
+    "Solution": ["Contact the database or server admin", "Try again in 10 minutes"],
+    "Contact": "Steven.schoebinger@gmail.com"
+    }
+}
+  
+  

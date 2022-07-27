@@ -2,4 +2,25 @@
   .content.error {
     color: red;
   }
+  div + li.content:before {
+    content: none;
+  }
+
+  .content.cause {
+    color: yellow;
+  }
+
+  .content.solution {
+    color: var(--terminal-green);
+  }
+}
+
+.error.card {
+  margin: auto;
+  margin-top: 2%;
+  min-width: fit-content;
+  min-height: 40vh;
+  & .content {
+    display: grid;
+  }
 }
