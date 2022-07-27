@@ -15,22 +15,26 @@ const Contact = () => {
   }, [api]);
 
   return (
-    <div className="contact">
-      <div className="card">
-        <div className="title">Ways to contact me </div>
-        <div className="content">
-          {cards.map((card, i) => (
-            <>
-              <button className="ascii-button" onClick={() => window.open(`${card.link}`)}>
-                <pre>
-                  <code>{card.ascii}</code>
-                </pre>
-              </button>
-            </>
-          ))}
+    <>
+      {cards.length > 1 && (
+        <div className="contact">
+          <div className="card">
+            <div className="title">Ways to contact me </div>
+            <div className="content">
+              {cards.map((card, i) => (
+                <>
+                  <button className="ascii-button" onClick={() => window.open(`${card.link}`)}>
+                    <pre>
+                      <code>{card.ascii}</code>
+                    </pre>
+                  </button>
+                </>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

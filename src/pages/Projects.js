@@ -15,29 +15,33 @@ const Projects = () => {
   }, [api]);
 
   return (
-    <div className="projects">
-      <div className="project-holder">
-        {projects.map((project, i) => (
-          <div className="project" key={i}>
-            <div className="project-title">{project.name}</div>
-            <ul>
-              <li className="language">
-                <div>Language:</div>
-                <li>{project.language}</li>
-              </li>
-              <li className="takeaway">
-                <div>Takeaway:</div>
-                <li>{project.takeaway}</li>
-              </li>
-              <li className="description">
-                <div>Description:</div>
-                <li>{project.description}</li>
-              </li>
-            </ul>
+    <>
+      {projects.length > 1 && (
+        <div className="projects">
+          <div className="project-holder">
+            {projects.map((project, i) => (
+              <div className="project" key={i}>
+                <div className="project-title">{project.name}</div>
+                <ul>
+                  <li className="language">
+                    <div>Language:</div>
+                    <li>{project.language}</li>
+                  </li>
+                  <li className="takeaway">
+                    <div>Takeaway:</div>
+                    <li>{project.takeaway}</li>
+                  </li>
+                  <li className="description">
+                    <div>Description:</div>
+                    <li>{project.description}</li>
+                  </li>
+                </ul>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 
