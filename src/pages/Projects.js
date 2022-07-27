@@ -1,46 +1,53 @@
 import { useEffect, useState } from 'react';
 import { useAPI } from '../utils/useAPI';
+import Error from '../components/Error';
 import './Projects.scss';
 
 const Projects = () => {
   const api = useAPI();
   const [projects, setProjects] = useState([]);
+  const [error, setError] = useState(undefined);
 
   useEffect(() => {
     const getData = async () => {
-      const res = await api.get('/cards/projects');
-      setProjects(res.data);
+      try {
+        const res = await api.get('/cards/projects');
+        setProjects(res.data);
+      } catch (e) {
+        setError(e.message);
+      }
     };
     getData();
   }, [api]);
 
   return (
     <>
-      {projects.length > 1 && (
+      {projects.length > 0 && !error && (
         <div className="projects">
           <div className="project-holder">
             {projects.map((project, i) => (
               <div className="project" key={i}>
                 <div className="project-title">{project.name}</div>
                 <ul>
-                  <li className="language">
+                  <ul className="language">
                     <div>Language:</div>
                     <li>{project.language}</li>
-                  </li>
-                  <li className="takeaway">
+                  </ul>
+                  <ul className="takeaway">
                     <div>Takeaway:</div>
                     <li>{project.takeaway}</li>
-                  </li>
-                  <li className="description">
+                  </ul>
+                  <ul className="description">
                     <div>Description:</div>
                     <li>{project.description}</li>
-                  </li>
+                  </ul>
                 </ul>
               </div>
             ))}
           </div>
         </div>
       )}
+      <Error errorMessage={error} />
     </>
   );
 };

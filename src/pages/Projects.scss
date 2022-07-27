@@ -34,7 +34,6 @@
   }
 }
 
-.project-content,
 .takeaway,
 .language,
 .description {
@@ -59,7 +58,7 @@ ul {
   padding: 0;
 }
 
-li > div {
+ul > div {
   font-size: 1.1em;
   text-decoration: underline;
   padding-bottom: 10px;

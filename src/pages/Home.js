@@ -1,22 +1,30 @@
 import { useEffect, useState } from 'react';
 import { useAPI } from '../utils/useAPI';
+import Error from '../components/Error';
 import './Home.scss';
 
 const Home = () => {
   const api = useAPI();
   const [cards, setCards] = useState([]);
+  const [error, setError] = useState({ code: undefined, message: undefined });
 
   useEffect(() => {
     const getData = async () => {
-      const res = await api.get('cards');
-      setCards(res.data);
+      try {
+        const res = await api.get('cards');
+        setCards(res.data);
+      } catch (e) {
+        setError({ code: e.code, message: e.message });
+        console.log(e);
+      }
     };
     getData();
   }, [api]);
+  console.log(error);
 
   return (
     <>
-      {cards.length > 1 && (
+      {cards.length > 0 && !error && (
         <div className="home">
           <div className="cardHolder">
             {cards.map((card, i) => (
@@ -30,6 +38,7 @@ const Home = () => {
           </div>
         </div>
       )}
+      <Error errorMessage={error}></Error>
     </>
   );
 };
