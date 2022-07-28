@@ -1,8 +1,13 @@
 {
     "ERR_NETWORK": {
-    "Causes": ["Server is down", "Database is down"],
-    "Solution": ["Contact the database or server admin", "Try again in 10 minutes"],
-    "Contact": "Steven.schoebinger@gmail.com"
+        "Causes": ["- Server is down", "- Database is down"],
+        "Solution": ["- Contact the database or server administrator", "- Try again in 10 minutes"],
+        "Contact": "- Steven.schoebinger@gmail.com"
+    },
+    "ERR_BAD_REQUEST": {
+        "Causes": ["- Server resource has moved", "- Website does not reflect changes to server"],
+        "Solution": ["- Contact the website owner", "- Try again in 10 minutes"],
+        "Contact": "- Steven.schoebinger@gmail.com"
     }
 }
   
