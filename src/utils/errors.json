@@ -1,14 +1,22 @@
 {
-    "ERR_NETWORK": {
-        "Causes": ["- Server is down", "- Database is down"],
-        "Solution": ["- Contact the database or server administrator", "- Try again in 10 minutes"],
-        "Contact": "- Steven.schoebinger@gmail.com"
-    },
-    "ERR_BAD_REQUEST": {
-        "Causes": ["- Server resource has moved", "- Website does not reflect changes to server"],
-        "Solution": ["- Contact the website owner", "- Try again in 10 minutes"],
-        "Contact": "- Steven.schoebinger@gmail.com"
-    }
+  "ERR_NETWORK": {
+    "Causes": ["- Server is down", "- Database is down"],
+    "Solution": ["- Contact the database or server administrator", "- Try again in 10 minutes"],
+    "Contact": "- Steven.schoebinger@gmail.com"
+  },
+  "ERR_BAD_REQUEST": {
+    "Causes": ["- Server resource has moved", "- Website does not reflect changes to server"],
+    "Solution": ["- Contact the website owner", "- Try again in 10 minutes"],
+    "Contact": "- Steven.schoebinger@gmail.com"
+  },
+  "ECONNABORTED": {
+    "Causes": ["- Internet connection is slow", "- Server is down"],
+    "Solution": [
+      "- Check internet connection speed",
+      "- Restart browser",
+      "- Contact the server administrator",
+      "- Try again in 10 minutes"
+    ],
+    "Contact": "- Steven.schoebinger@gmail.com"
+  }
 }
-  
-  
