@@ -64,7 +64,7 @@ ul > div {
   padding-bottom: 10px;
 }
 
-div + li {
+div ~ li {
   padding-left: 20px;
   &:before {
     content: '- ';

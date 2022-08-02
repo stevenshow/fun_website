@@ -30,12 +30,16 @@ const Projects = () => {
                 <div className="project-title">{project.name}</div>
                 <ul>
                   <ul className="language">
-                    <div>Language:</div>
+                    <div>Languages:</div>
                     <li>{project.language}</li>
                   </ul>
                   <ul className="takeaway">
-                    <div>Takeaway:</div>
-                    <li>{project.takeaway}</li>
+                    <div>Takeaways:</div>
+                    {typeof project.takeaway === 'string' &&
+                      (project.takeaway = project.takeaway.split(','))}
+                    {project.takeaway.map((takeaway, i) => {
+                      return <li key={i}>{takeaway.trim()}</li>;
+                    })}
                   </ul>
                   <ul className="description">
                     <div>Description:</div>
