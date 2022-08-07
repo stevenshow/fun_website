@@ -3,6 +3,7 @@ import Home from './pages/Home.js';
 import TopBar from './components/TopBar';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Api from './pages/Api';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function changeTheme(color) {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/api" element={<Api />} />
       </Routes>
     </Router>
   );
