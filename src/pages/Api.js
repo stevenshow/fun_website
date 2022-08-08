@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useAPI } from '../utils/useAPI';
 import Error from '../components/Error';
 import './Api.scss';
+const _ = require('lodash');
 
 const Api = () => {
   const api = useAPI();
@@ -24,21 +25,30 @@ const Api = () => {
 
   return (
     <>
-      <div className="home">
-        <div className="cardHolder">
+      <div className="api">
+        <div className="card-holder">
           <div className="card" style={{ minHeight: 'fit-content' }}>
             <div className="title">Powerade Price</div>
             <div className="content" style={{ display: 'flex', flexDirection: 'column' }}>
-              Please click the button to retrieve the prices for Mountain Berry Powerade at Smiths
+              <span>
+                Please click the button to retrieve the prices for Mountain Berry Powerade at Smiths
+              </span>
+              <em>If the data does not load, try again</em>
               {loading && <div className="lds-dual-ring"></div>}
               {price && (
                 <>
-                  <div className="location" style={{ marginTop: '1rem' }}>
-                    Location: <span>{price.location}</span>
-                  </div>
-                  <div className="price">
-                    Price: <span>{price.pickup}</span>
-                  </div>
+                  <table className="powerade-table">
+                    <tbody>
+                      <tr>
+                        <td>Location</td>
+                        <td className="location">{price.location}</td>
+                      </tr>
+                      <tr>
+                        <td>Price</td>
+                        <td className="price">{price.pickup}</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </>
               )}
               {error['code'] != null && <Error errorMessage={error} />}

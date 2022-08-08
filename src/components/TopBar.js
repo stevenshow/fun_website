@@ -26,7 +26,7 @@ const TopBar = (props) => {
         <span className="path">
           <span className="secondary-highlight">~/</span>
           <span className="secondary-highlight" ref={directory}></span>$
-          <Command />
+          <Command dirRef={directory} />
         </span>
       </div>
       <div className="links-right">

@@ -1,5 +1,11 @@
 {
-  "Valid": ["color", "cd", "linkedin", "github", "help"],
+  "Valid": [
+    "color",
+    "cd",
+    "linkedin",
+    "github",
+    "help"
+  ],
   "Commands": {
     "color": {
       "execute": "theme",
@@ -17,7 +23,12 @@
     },
     "cd": {
       "execute": "changeDirectory",
-      "parameters": ["home", "projects", "contact"]
+      "parameters": [
+        "home",
+        "projects",
+        "api",
+        "contact"
+      ]
     }
   }
 }
