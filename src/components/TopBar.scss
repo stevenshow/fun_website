@@ -10,9 +10,9 @@
     font-size: 1.2rem;
   }
 
-  & > div {
+  & .console {
     color: white;
-    margin: 0;
+    margin-top: 0.6rem;
   }
 
   & .primary-highlight {
@@ -41,6 +41,10 @@
 .projects-nav {
   border-bottom: 1px solid var(--terminal-primary);
   border-top: 1px solid var(--terminal-primary);
+}
+
+.api-nav {
+  border-bottom: 1px solid var(--terminal-primary);
 }
 
 .command-input {

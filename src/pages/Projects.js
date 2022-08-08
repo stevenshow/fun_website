@@ -24,10 +24,10 @@ const Projects = () => {
     <>
       {projects.length > 0 ? (
         <div className="projects">
-          <div className="project-holder">
+          <div className="card-holder">
             {projects.map((project, i) => (
-              <div className="project" key={i}>
-                <div className="project-title">{project.name}</div>
+              <div className="card" key={i}>
+                <div className="title">{project.name}</div>
                 <ul>
                   <ul className="language">
                     <div>Languages:</div>

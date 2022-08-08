@@ -13,7 +13,7 @@ const TopBar = (props) => {
 
   return (
     <div className="header">
-      <div>
+      <div className="console">
         <span className="primary-highlight">steven@schoebinger</span>:
         <span className="secondary-highlight">~/</span>$
         <span className="primary-highlight"> echo </span>
@@ -26,7 +26,7 @@ const TopBar = (props) => {
         <span className="path">
           <span className="secondary-highlight">~/</span>
           <span className="secondary-highlight" ref={directory}></span>$
-          <Command />
+          <Command dirRef={directory} />
         </span>
       </div>
       <div className="links-right">
@@ -40,6 +40,9 @@ const TopBar = (props) => {
           to="/projects"
         >
           Projects
+        </Link>
+        <Link onClick={() => setCurrentDir('api')} id="api" className="link api-nav" to="/api">
+          Api
         </Link>
         <Link onClick={() => setCurrentDir('contact')} id="contact" className="link" to="/contact">
           Contact

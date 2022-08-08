@@ -7,7 +7,7 @@ export const changeTheme = (setColor, color) => {
   setColor(color);
 };
 
-export const executeCommand = (setColor = () => {}, userCommand, ...userParams) => {
+export const executeCommand = (setColor = () => {}, userCommand, dirRef, ...userParams) => {
   switch (userCommand) {
     case 'color':
       if (validateCommand(userCommand, userParams)) {
@@ -19,7 +19,8 @@ export const executeCommand = (setColor = () => {}, userCommand, ...userParams) 
       if (validateCommand(userCommand, userParams)) {
         let nav = document.getElementById(...userParams);
         let dir = userParams[0] === 'home' ? '' : `${userParams}`;
-        document.querySelector('.directory').textContent = dir;
+        dirRef.current.textContent = dir;
+        // document.querySelector('.directory').textContent = dir;
         nav.click();
       }
       break;

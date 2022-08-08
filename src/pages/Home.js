@@ -24,7 +24,7 @@ const Home = () => {
     <>
       {cards.length > 0 ? (
         <div className="home">
-          <div className="cardHolder">
+          <div className="card-holder">
             {cards.map((card, i) => (
               <div className="card" key={i}>
                 <div className="title">{card.name}</div>

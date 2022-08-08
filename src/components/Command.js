@@ -4,7 +4,7 @@ import { isMobile } from 'react-device-detect';
 import { changeTheme, executeCommand } from '../utils/execution';
 const commands = require('../utils/commands');
 
-const Command = () => {
+const Command = ({ dirRef }) => {
   const [input, setInput] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
   const [color, setColor] = useState(() => localStorage.getItem('color') ?? 'green');
@@ -51,7 +51,7 @@ const Command = () => {
       }
       // execute command
       let parameters = input.split(' ').slice(1);
-      executeCommand(setColor, command[0], ...parameters);
+      executeCommand(setColor, command[0], dirRef, ...parameters);
       clearInput();
     } else {
       setInput(`try typing 'help'`);
