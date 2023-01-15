@@ -31,6 +31,12 @@ const HumidityCard = () => {
           Please click the button to retrieve the current conditions (humidity and temperature) in
           the crawlspace of my home.
         </span>
+        <em>
+          I decided I needed to gather this to make sure that any cardboard I had stored down there
+          was in ok conditions. I have a Raspberry Pi Pico that I hooked up to a DHT11 to gather the
+          temperature and humidity, which is then sent to my Raspberry Pi4 via a POST request to my
+          server where it is stored on a MariaDB database.
+        </em>
         {loading && <div className="lds-dual-ring"></div>}
         {conditions && (
           <>
