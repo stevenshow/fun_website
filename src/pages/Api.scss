@@ -3,19 +3,23 @@
 }
 
 .location,
-.price {
-    color: var(--terminal-secondary);
-  }
+.price,
+.humidity,
+.temp,
+.time {
+  color: var(--terminal-secondary);
+}
 
-.powerade-table {
-    margin-top: 1rem;
-    & tr > td {
-      border: 1px solid var(--terminal-primary);
-      border-collapse: collapse;
-      border-radius: 5px;   
-      padding: 5px;
-    }
-    width: fit-content
+.powerade-table,
+.conditions-table {
+  margin-top: 1rem;
+  & tr > td {
+    border: 1px solid var(--terminal-primary);
+    border-collapse: collapse;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  width: fit-content;
 }
 
 em {
