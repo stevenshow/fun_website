@@ -13,7 +13,6 @@ const PoweradeCard = () => {
       setPrice(undefined);
       setLoading(true);
       const res = await api.get('/products/powerade');
-      console.log(res);
       setPrice(res.data);
       setLoading(false);
     } catch (e) {
@@ -31,7 +30,10 @@ const PoweradeCard = () => {
         <span>
           Please click the button to retrieve the prices for Mountain Berry Powerade at Smiths
         </span>
-        <em>If the data does not load, try again</em>
+        <em>
+          This data is collected by scraping the local smiths, which means the results can be hit or
+          miss. If the data does not load, try again.
+        </em>
         {loading && <div className="lds-dual-ring"></div>}
         {price && (
           <>
