@@ -12,7 +12,7 @@ const Home = () => {
   const [error, setError] = useState({ code: undefined, message: undefined });
 
   useEffect(() => {
-    const socket = io('http://localhost:3000');
+    const socket = io('http://api.devsteve.net:3000');
     socket.on('serverValue', (data) => {
       console.log(data);
     });
