@@ -1,18 +1,31 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useAPI } from '../utils/useAPI';
 import Error from '../components/Error';
 import './Home.scss';
 import io from 'socket.io-client';
-const socket = io('http://localhost:3000');
 
 const Home = () => {
   const api = useAPI();
+  const location = useLocation();
   const [cards, setCards] = useState([]);
   const [error, setError] = useState({ code: undefined, message: undefined });
 
-  socket.on('serverValue', (data) => {
-    console.log(data.data);
-  });
+  useEffect(() => {
+    const socket = io('http://localhost:3000');
+    socket.on('serverValue', (data) => {
+      console.log(data);
+    });
+
+    setInterval(() => {
+      socket.emit('getPiStats', {}, (serverValue) => {
+        console.log(serverValue);
+        console.log(`Received value from server: ${serverValue.value}`);
+      });
+    }, 3000);
+
+    return () => socket.disconnect();
+  }, [location]);
 
   useEffect(() => {
     const getData = async () => {
